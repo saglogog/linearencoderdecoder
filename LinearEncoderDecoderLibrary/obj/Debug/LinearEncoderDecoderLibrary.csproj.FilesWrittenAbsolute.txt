@@ -1,0 +1,1 @@
+/home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs

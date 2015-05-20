@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="LinearEncoderDecoderLibrary/LinearEncoderDecoderLibrary.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEnDecTests/MatrixCreatorTests.cs">
+    <Files>
+      <File FileName="LinearEncoderDecoderLibrary/MatrixCreator.cs" Line="23" Column="38" />
+      <File FileName="LinearEnDecTests/MatrixCreatorTests.cs" Line="18" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
