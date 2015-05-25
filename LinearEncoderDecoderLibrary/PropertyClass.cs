@@ -3,12 +3,8 @@
 namespace LinearEncoderDecoderLibrary
 {
 	public class PropertyClass
-	{
-		public PropertyClass ()
-		{
-		}
-			
-		private int[,] TwoDimArrayConverter(string[,] matrix)
+	{		
+		public int[,] TwoDimArrayConverter(string[,] matrix)
 		{
 			int[,] twoDimArray = new int[matrix.GetLength(0),matrix.GetLength(1)];
 			for (int i = 0; i < matrix.GetLength(0); i++) {
@@ -20,16 +16,8 @@ namespace LinearEncoderDecoderLibrary
 		}
 
 		private int[,] pArray;
-		public int[,] PArray
-		{
-				
-			get {
-				return pArray;
-			}
-			set {
-				pArray = value;
-			}
-		}
+		//automatic property
+		public int[,] PArray{get;set;}
 	}
 }
 

@@ -8,15 +8,32 @@ namespace LinearEnDecTests
 	[TestFixture ()]
 	public class EncoderTests
 	{
+		[Test()]
+		public void TestMockSetup()
+		{
+			MockSetupClass msc = new MockSetupClass ();
+			msc.matrixFiller ();
+			PropertyClass pc = new PropertyClass ();
+			int[,] pArray = pc.PArray;
+			for (int i = 0; i < pArray.GetLength (0); i++) {
+				for (int j = 0; j < pArray.GetLength (1); j++) {
+					Console.Write (pArray [i, j]);
+					if (j == pArray.GetLength (1) - 1) {
+						Console.Write ("\n");
+					}
+				}
+			}
+
+		}
 		[Test ()]
 		public void TestEncodeAndCodewordCreator()
 		{
-			MatrixCreatorTests mct = new MatrixCreatorTests ();
-			string[,] matrix = mct.matrixFiller ();
-			MatrixCreator mc = new MatrixCreator (matrix);
-			int[,] PMatrix = mc.ReturnPMatrix ();
+			MockSetupClass msc = new MockSetupClass ();
+			msc.matrixFiller ();
+			PropertyClass pc = new PropertyClass ();
+			int[,] PMatrix = pc.PArray;
 			int[] theWord = {0,1,1};
-			Encoder enc = new Encoder(theWord, PMatrix);
+			Encoder enc = new Encoder(theWord);
 			int[] extraBits = enc.Encode ();
 			int[] codeword = enc.CodewordCreator ();
 			for (int i = 0; i < PMatrix.GetLength (0); i++) {

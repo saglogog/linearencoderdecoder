@@ -44,14 +44,14 @@ namespace LinearEncoderDecoderLibrary
 			return r;
 		}
 
-		public int[,] CreateAllCodewordsBasedOnKAndP(){
+		public void CreateAllCodewordsBasedOnKAndP(){
 			int[,] msgWords = CreateAllBinaryMsgWords ();
-			MatrixCreator mc = new MatrixCreator(
-			Encoder enc = new Encoder(
+			PropertyClass pc = new PropertyClass ();
+			//pc.PArray;
+			//Encoder enc = new Encoder();
 			for (int i = 0; i < msgWords.GetLength (0); i++) {
 				
 			}
 		}
 	}
 }
-

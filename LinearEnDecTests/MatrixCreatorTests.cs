@@ -7,29 +7,13 @@ namespace LinearEnDecTests
 	[TestFixture ()]
 	public class MatrixCreatorTests
 	{
-		MatrixCreator mc;
-		string[,] matrix;
-		public MatrixCreatorTests(){
-			matrix = matrixFiller ();
-			PropertyClass pc = new PropertyClass ();
-			pc.PArray = 
-			mc = new MatrixCreator(matrix);
-		}
-		Random rd = new Random ();
-		public string[,] matrixFiller(){
-			string[,] theMatrix = new string[3, 4];
-			for (int i = 0; i < 3; i++) {
-				for (int k = 0; k < 4; k++) {
-					theMatrix [i, k] = Convert.ToString(rd.Next ()%2);
-				}
-			}
-			return theMatrix;
-		}
-
+		MockSetupClass msc = new MockSetupClass ();
+		MatrixCreator mc = new MatrixCreator ();
 
 		[Test ()]
 		public void TestGCreator ()
 		{
+			msc.matrixFiller ();
 			int[,] GMatrix = mc.GCreator();
 			for (int i = 0; i < 3; i++) {
 				for (int k = 0; k < 7; k++) {
