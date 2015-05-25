@@ -30,13 +30,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LinearEncoderDecoderLibrary\LinearEncoderDecoderLibrary.csproj">
       <Project>{886D1428-1144-444D-A291-4507FD4C1A23}</Project>
@@ -45,5 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MatrixCreatorTests.cs" />
+    <Compile Include="CodewordGeneratorTests.cs" />
+    <Compile Include="EncoderTests.cs" />
+    <Compile Include="MockSetupClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

@@ -1,1 +1,5 @@
 /home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/bin/Debug/LinearEncoderDecoderLibrary.dll.mdb
+/home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/bin/Debug/LinearEncoderDecoderLibrary.dll
+/home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/obj/Debug/LinearEncoderDecoderLibrary.dll
+/home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/obj/Debug/LinearEncoderDecoderLibrary.dll.mdb
