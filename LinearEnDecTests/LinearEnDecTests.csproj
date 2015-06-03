@@ -45,6 +45,7 @@
     <Compile Include="CodewordGeneratorTests.cs" />
     <Compile Include="EncoderTests.cs" />
     <Compile Include="MockSetupClass.cs" />
+    <Compile Include="PropertyClassTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

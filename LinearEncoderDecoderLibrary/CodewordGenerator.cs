@@ -46,8 +46,8 @@ namespace LinearEncoderDecoderLibrary
 
 		public void CreateAllCodewordsBasedOnKAndP(){
 			int[,] msgWords = CreateAllBinaryMsgWords ();
-			PropertyClass pc = new PropertyClass ();
-			//pc.PArray;
+			//--PropertyClass pc = new PropertyClass ();
+			//--pc.PArray;
 			//Encoder enc = new Encoder();
 			for (int i = 0; i < msgWords.GetLength (0); i++) {
 				

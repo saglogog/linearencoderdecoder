@@ -1,0 +1,8 @@
+/home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/bin/Release/LinearEnDecTests.dll.mdb
+/home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/bin/Release/LinearEnDecTests.dll
+/home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/obj/Release/LinearEnDecTests.dll
+/home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/obj/Release/LinearEnDecTests.dll.mdb
+/home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/bin/Release/nunit.framework.dll
+/home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderLibrary.dll
+/home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderLibrary.dll.mdb

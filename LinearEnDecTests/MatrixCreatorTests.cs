@@ -13,7 +13,7 @@ namespace LinearEnDecTests
 		[Test ()]
 		public void TestGCreator ()
 		{
-			msc.matrixFiller ();
+			msc.FillMatrix ();
 			int[,] GMatrix = mc.GCreator();
 			for (int i = 0; i < 3; i++) {
 				for (int k = 0; k < 7; k++) {

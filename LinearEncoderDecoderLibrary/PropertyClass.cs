@@ -2,22 +2,23 @@
 
 namespace LinearEncoderDecoderLibrary
 {
-	public class PropertyClass
-	{		
-		public int[,] TwoDimArrayConverter(string[,] matrix)
-		{
-			int[,] twoDimArray = new int[matrix.GetLength(0),matrix.GetLength(1)];
-			for (int i = 0; i < matrix.GetLength(0); i++) {
-				for (int k = 0; k < matrix.GetLength (1); k++) {
-					twoDimArray [i,k] = Convert.ToInt32 (matrix [i,k]);
-				}
-			}
-			return twoDimArray;
-		}
+	//----perhaps use static class instead of singleton?-------
+	// Answer: the basic reason that a singleton implementation is used over a static class is that
+	//I will most probably need to pass the singleton class propert
 
-		private int[,] pArray;
+	//This class is made using the Singleton pattern so that "there can be only one" pArray instance,
+	//and thus all classes using it will not have to reinitialize the class and not be able to find the
+	//value given initially to the pArray.
+	public static class PropertyClass
+	{	
+		//private constructor so that the class can be used only in the way specified bellow	
+	    //private PropertyClass(){}
+
+		//this nested class used for lazy initialization
+
+		private static int[,] pArray;
 		//automatic property
-		public int[,] PArray{get;set;}
+		public static int[,] PArray{get;set;}
 	}
 }
 

@@ -6,7 +6,7 @@ namespace LinearEncoderDecoderLibrary
 	{
 		int[,] intPMatrix;
 		int [,] IkMatrix;
-		PropertyClass pc = new PropertyClass();
+		//--PropertyClass pc = new PropertyClass();
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="LinearEncoderDecoderLibrary.MatrixCreator"/> class.
@@ -14,7 +14,8 @@ namespace LinearEncoderDecoderLibrary
 		/// <param name="P">The user given matrix P</param>
 		public MatrixCreator()
 		{
-			intPMatrix = pc.PArray;
+			intPMatrix = PropertyClass.PArray;
+			//--intPMatrix = pc.PArray;
 		}
 			
 		private int[,] IdentityArrayCreator(int k){
