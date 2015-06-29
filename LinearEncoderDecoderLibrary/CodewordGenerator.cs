@@ -18,7 +18,7 @@ namespace LinearEncoderDecoderLibrary
 		/// Could also use lists and Descending Powers of Two and Subtraction method to calculate the 
 		/// binary from decimal. May prove more efficient.
 		/// </summary>
-		/// <returns>The all message word(lol-the all message world).</returns>
+		/// <returns>All the message words.</returns>
 		public int[,] CreateAllBinaryMsgWords(){
 			//quotient
 			int q;
@@ -44,13 +44,19 @@ namespace LinearEncoderDecoderLibrary
 			return r;
 		}
 
+		/// <summary>
+		/// Creates all codewords based on k and P matrix. After having created all possible
+		/// MESSAGE words on CreateAllBinaryMsgWords above, this gets the message words and creates the
+		/// codewords with the w=sG formula. 
+		/// </summary>
 		public void CreateAllCodewordsBasedOnKAndP(){
 			int[,] msgWords = CreateAllBinaryMsgWords ();
-			//--PropertyClass pc = new PropertyClass ();
-			//--pc.PArray;
-			//Encoder enc = new Encoder();
+			int[,] codeWords = new int[msgWords.GetLength (0), msgWords.GetLength (1)];
+			PropertyClass pc = new PropertyClass ();
+			pc.PArray;
+			Encoder enc = new Encoder();
 			for (int i = 0; i < msgWords.GetLength (0); i++) {
-				
+				codeWords(
 			}
 		}
 	}

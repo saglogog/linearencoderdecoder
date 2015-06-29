@@ -6,3 +6,11 @@
 /home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/bin/Release/nunit.framework.dll
 /home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderLibrary.dll
 /home/sag/Projects/LinearEncoderDecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderLibrary.dll.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/LinearEnDecTests.dll.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/LinearEnDecTests.dll
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/obj/Release/LinearEnDecTests.dll
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/obj/Release/LinearEnDecTests.dll.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/nunit.framework.dll
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderLibrary.dll
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderLibrary.dll.mdb

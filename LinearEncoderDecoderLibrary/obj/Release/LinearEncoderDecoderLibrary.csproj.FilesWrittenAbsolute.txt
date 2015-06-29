@@ -3,3 +3,8 @@
 /home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/bin/Release/LinearEncoderDecoderLibrary.dll
 /home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/obj/Release/LinearEncoderDecoderLibrary.dll
 /home/sag/Projects/LinearEncoderDecoder/LinearEncoderDecoderLibrary/obj/Release/LinearEncoderDecoderLibrary.dll.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderLibrary/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderLibrary/bin/Release/LinearEncoderDecoderLibrary.dll.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderLibrary/bin/Release/LinearEncoderDecoderLibrary.dll
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderLibrary/obj/Release/LinearEncoderDecoderLibrary.dll
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderLibrary/obj/Release/LinearEncoderDecoderLibrary.dll.mdb
