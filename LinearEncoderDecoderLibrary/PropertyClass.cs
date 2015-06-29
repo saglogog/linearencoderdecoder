@@ -11,14 +11,12 @@ namespace LinearEncoderDecoderLibrary
 	//value given initially to the pArray.
 	public static class PropertyClass
 	{	
-		//private constructor so that the class can be used only in the way specified bellow	
-	    //private PropertyClass(){}
-
-		//this nested class used for lazy initialization
-
-		private static int[,] pArray;
 		//automatic property
-		public static int[,] PArray{get;set;}
+		public static int[,] PArray{ get; set; }
+
+		public static int[,] HMatrix{ get; set; }
+
+		public static int[,] GMatrix{ get; set; }
 	}
 }
 
