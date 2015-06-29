@@ -11,7 +11,7 @@ namespace LinearEncoderDecoderLibrary
 		/// </summary>
 		public ErrorDetectorCorrector ()
 		{
-			private CreateErrorVectorArray
+			private CreateErrorVectorArray(int [,] HMatrix, 
 		}
 	}
 }
