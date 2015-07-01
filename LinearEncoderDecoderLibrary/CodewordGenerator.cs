@@ -47,16 +47,18 @@ namespace LinearEncoderDecoderLibrary
 		/// <summary>
 		/// Creates all codewords based on k and P matrix. After having created all possible
 		/// MESSAGE words on CreateAllBinaryMsgWords above, this gets the message words and creates the
-		/// codewords with the w=sG formula. 
+		/// codewords using the Encoder class methods. 
 		/// </summary>
-		public void CreateAllCodewordsBasedOnKAndP(){
+		public void CreateAllCodewordsBasedOnKAndP(int[,] allBinaryMsgWords){
 			int[,] msgWords = CreateAllBinaryMsgWords ();
 			int[,] codeWords = new int[msgWords.GetLength (0), msgWords.GetLength (1)];
 			PropertyClass pc = new PropertyClass ();
 			pc.PArray;
 			Encoder enc = new Encoder();
 			for (int i = 0; i < msgWords.GetLength (0); i++) {
-				codeWords(
+				for (int y = 0; j < msgWords.GetLength (1); j++) {
+					
+				}
 			}
 		}
 	}

@@ -6,12 +6,10 @@ namespace LinearEncoderDecoderLibrary
 	{
 		int[] word;
 		int[,] P;
-		//--PropertyClass pc = new PropertyClass ();
 		public Encoder (int[] theWord)
 		{
 			word = theWord;
 			P = PropertyClass.PArray;
-			//--P = pc.PArray;
 		}
 
 		public int[] Encode(){
