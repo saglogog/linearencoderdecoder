@@ -56,7 +56,7 @@ namespace LinearEncoderDecoderLibrary
 			pc.PArray;
 			Encoder enc = new Encoder();
 			for (int i = 0; i < msgWords.GetLength (0); i++) {
-				for (int y = 0; j < msgWords.GetLength (1); j++) {
+				for (int j = 0; j < msgWords.GetLength (1); j++) {
 					
 				}
 			}
