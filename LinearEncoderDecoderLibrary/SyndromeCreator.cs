@@ -34,6 +34,23 @@ namespace LinearEncoderDecoderLibrary
 
 			return errorVectors;
 		}
+
+		//complex iteration shit to create the error syndromes
+		public Dictionary<int[], int[]>  CreateSyndrome(int n, int[,]HMatrix){
+			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
+			int[,] errorVectors = CreateErrorVectors (n);
+			int[] currentErrorVector = new int[n];
+			int[] currentErrorSyndrome = new int[n];
+				for (int i = 0; i < n + 1; i++) {
+					for (int j = 0; j <= HMatrix.GetLength(0); j++) {
+						for(int l =0; l<=n; l++){
+							
+						}
+					}
+
+				}
+					return syndromeAndErrorVectorArray;
+		}
 	}
 }
 
