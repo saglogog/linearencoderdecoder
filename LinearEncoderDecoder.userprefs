@@ -1,24 +1,10 @@
 ﻿<Properties StartupItem="LinearEncoderDecoderLibrary/LinearEncoderDecoderLibrary.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderLibrary/PropertyClass.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderLibrary/SyndromeCreator.cs">
     <Files>
-      <File FileName="LinearEncoderDecoderLibrary/Encoder.cs" Line="19" Column="30" />
-      <File FileName="LinearEncoderDecoderLibrary/MatrixCreator.cs" Line="89" Column="28" />
-      <File FileName="LinearEncoderDecoderLibrary/CodewordGenerator.cs" Line="1" Column="1" />
-      <File FileName="LinearEncoderDecoderLibrary/ErrorDetectorCorrector.cs" Line="12" Column="35" />
-      <File FileName="LinearEncoderDecoderLibrary/PropertyClass.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderLibrary/Decoder.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderLibrary/SyndromeCreator.cs" Line="32" Column="6" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="LinearEncoderDecoder" expanded="True" selected="True">
-            <Node name="LinearEnDecTests" expanded="True">
-              <Node name="LinearEnDecTests" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

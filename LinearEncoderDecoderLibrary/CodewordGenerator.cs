@@ -22,7 +22,9 @@ namespace LinearEncoderDecoderLibrary
 		public int[,] CreateAllBinaryMsgWords(){
 			//quotient
 			int q;
-			//remainder arrays, and our words 
+			//remainder arrays, and our words.
+			//The array has 2^k rows and k columns because if the binary words
+			//have k digits, then the number of all the possible words w/ k digits is 2^k.
 			int[,] r = new int[(int)Math.Pow(2, k), k];
 			try{
 				for (int i = 0; i < Math.Pow (2, k); i++) {
@@ -49,17 +51,25 @@ namespace LinearEncoderDecoderLibrary
 		/// MESSAGE words on CreateAllBinaryMsgWords above, this gets the message words and creates the
 		/// codewords using the Encoder class methods. 
 		/// </summary>
-		public void CreateAllCodewordsBasedOnKAndP(int[,] allBinaryMsgWords){
+		public int[,] CreateAllCodewordsBasedOnKAndP(int n){
 			int[,] msgWords = CreateAllBinaryMsgWords ();
-			int[,] codeWords = new int[msgWords.GetLength (0), msgWords.GetLength (1)];
-			PropertyClass pc = new PropertyClass ();
-			pc.PArray;
+			//O pinakas autos exei arithmo grammwn to plithos olwn twn pithanwn kwdikwn lexewn, to opoio einai iso me
+			//twn arithmo olwn twn pithanwn lexewn minimatos(msgWords) kai arithmo stilwn to n to opoio vrisketai apo ti thewria.
+			int[,] codeWords = new int[msgWords.GetLength (0), n];
+			int[] tempMsgWord = new int[msgWords.GetLength(1)];
+			int[] tempCodeword = new int[n];
 			Encoder enc = new Encoder();
 			for (int i = 0; i < msgWords.GetLength (0); i++) {
 				for (int j = 0; j < msgWords.GetLength (1); j++) {
-					
+					tempMsgWord [j] = msgWords [i, j];
+				}
+				tempCodeword = enc.CodewordCreator (tempMsgWord);
+				// n = codeWords.GetLength(1)
+				for (int h = 0; h < n; h++) {
+					codeWords [i, h] = tempCodeword [h];
 				}
 			}
+			return codeWords;
 		}
 	}
 }

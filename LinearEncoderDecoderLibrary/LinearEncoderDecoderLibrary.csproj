@@ -38,7 +38,7 @@
     <Compile Include="PropertyClass.cs" />
     <Compile Include="HelperClass.cs" />
     <Compile Include="Decoder.cs" />
-    <Compile Include="ErrorDetectorCorrector.cs" />
+    <Compile Include="SyndromeCreator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
