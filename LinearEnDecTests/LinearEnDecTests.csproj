@@ -46,6 +46,8 @@
     <Compile Include="EncoderTests.cs" />
     <Compile Include="MockSetupClass.cs" />
     <Compile Include="PropertyClassTests.cs" />
+    <Compile Include="SyndromeCreatorTests.cs" />
+    <Compile Include="HelperClassTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

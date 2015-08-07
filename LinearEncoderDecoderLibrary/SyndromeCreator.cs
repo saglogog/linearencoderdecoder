@@ -35,7 +35,28 @@ namespace LinearEncoderDecoderLibrary
 			return errorVectors;
 		}
 
-		//complex iteration shit to create the error syndromes
+		//magic follows(check the notes): since our error vectors only contain up to one  1 and knowing exactly how the error 
+		//vectors are produced(ex: 100,010,001,000) we execute the multiplication between the HMatrix and the error vectors 
+		//array as follows: the error syndrome of each vector is the column of the Hmatrix where the 1 is in the
+		//corresponding codeword so knowing how that in the first vector the one is the first digit, in the second
+		// the one is in the second digit etc we get as the first syndrome the first column of H, the second syndrome is
+		// the second etc. In the case of the 00...0 error vector the syndrome is 000.
+		/*
+		public Dictionary<int[], int []> CreateSyndrome(int n, int HMatrix){
+			
+			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
+			int[,] errorVectors = CreateErrorVectors (n);
+			int[] tempErrorVec = new int[n];
+
+			for (int i = 0; i < n + 1; i++) {
+				for (int j = 0; j < n; j++) {
+					tempErrorVec [i] = errorVectors [j, i];
+				}
+			}
+		}
+
+
+		/*
 		public Dictionary<int[], int[]>  CreateSyndrome(int n, int[,]HMatrix){
 			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
 			int[,] errorVectors = CreateErrorVectors (n);
@@ -51,6 +72,7 @@ namespace LinearEncoderDecoderLibrary
 				}
 					return syndromeAndErrorVectorArray;
 		}
+		*/
 	}
 }
 
