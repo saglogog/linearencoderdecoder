@@ -41,18 +41,20 @@ namespace LinearEncoderDecoderLibrary
 		//corresponding codeword so knowing how that in the first vector the one is the first digit, in the second
 		// the one is in the second digit etc we get as the first syndrome the first column of H, the second syndrome is
 		// the second etc. In the case of the 00...0 error vector the syndrome is 000.
-		/*
-		public Dictionary<int[], int []> CreateSyndrome(int n, int HMatrix){
+
+		public Dictionary<int[], int []> CreateSyndrome(int n, int[,] HMatrix){
 			
 			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
-			int[,] errorVectors = CreateErrorVectors (n);
-			int[] tempErrorVec = new int[n];
+			HelperClass hc = new HelperClass ();
+			//Get the error vectors array based on n and then convert ot jagged from multidimensional
+			int[][] errorVectors = hc.ConvertRectangulartoJaggedLtoA(CreateErrorVectors (n));
+			int[][] syndromes = hc.ConvertRectangulartoJaggedCtoA (HMatrix);
 
-			for (int i = 0; i < n + 1; i++) {
-				for (int j = 0; j < n; j++) {
-					tempErrorVec [i] = errorVectors [j, i];
-				}
+			for (int i = 0; i < n ; i++) {
+				syndromeAndErrorVectorArray.Add (syndromes [i], errorVectors [i]);
 			}
+
+			return syndromeAndErrorVectorArray;
 		}
 
 
