@@ -59,6 +59,7 @@ namespace LinearEncoderDecoderLibrary
 
 
 		/*
+		 * OBSOLETE AND UNFINISHED
 		public Dictionary<int[], int[]>  CreateSyndrome(int n, int[,]HMatrix){
 			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
 			int[,] errorVectors = CreateErrorVectors (n);
@@ -77,4 +78,3 @@ namespace LinearEncoderDecoderLibrary
 		*/
 	}
 }
-
