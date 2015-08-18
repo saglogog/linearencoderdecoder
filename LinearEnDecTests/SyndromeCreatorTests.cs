@@ -28,27 +28,58 @@ namespace LinearEnDecTests
 		[Test ()]
 		public void TestCreateSyndrome()
 		{
-			if (PropertyClass.PArray == null) {
-				MockSetupClass msc = new MockSetupClass ();
-				msc.FillMatrix ();
-			}
-			int[,] PMatrix = PropertyClass.PArray;
-			MatrixCreator mc = new MatrixCreator ();
-			int[,] HMatrix = mc.HCreator ();
+			int[,] HMatrix = new int[,] {
+				{1,1,1,0,1,0,0 },
+				{1,1,0,1,0,1,0 },
+				{1,0,1,1,0,0,1 }
+			};
 			SyndromeCreator sc = new SyndromeCreator ();
-			Dictionary<int[], int[]> errorVectorAndSyndromeArray = sc.CreateSyndrome (7, HMatrix);
-			int c = errorVectorAndSyndromeArray.Count;
-			int[][] errorSyndromes = new int[c][];
-			int[][] errorVectors = new int[c][];
+			Dictionary<int[], int[]> errorVectorAndSyndromeArray = sc.CreateSyndrome (HMatrix);
+			int[][] errorSyndromes = new int[HMatrix.GetLength(1)][];
+			int[][] errorVectors = new int[HMatrix.GetLength(1)][];
 			errorVectorAndSyndromeArray.Keys.CopyTo (errorSyndromes, 0);
 			errorVectorAndSyndromeArray.Values.CopyTo (errorVectors,0);
 
-			for (int i = 0; i < c; i++) {
-				for (int j = 0; j < errorSyndromes [1] [1].ToString ().Length;) {
+			Console.WriteLine ("These are the error syndromes:");
+			for (int i = 0; i < HMatrix.GetLength(1); i++) {
+				for (int j = 0; j < HMatrix.GetLength(0); j++) {
+					Console.Write(errorSyndromes[i][j]);
+				}
+				Console.Write ("\n");
+			}
+
+			Console.WriteLine ("These are the corresponding error vectors:");
+			for (int i = 0; i < HMatrix.GetLength(1); i++) {
+				for (int j = 0; j < HMatrix.GetLength(1); j++) {
 					Console.Write(errorVectors[i][j]);
 				}
 				Console.Write ("\n");
 			}
 		}
+
+		/*
+		 *Tests the CreateSyndrome2() from SyndromeCreator which is currently commented out.
+		 *
+		[Test ()]
+		public void TestCreateSyndrome2()
+		{
+			
+			int[,] HMatrix = new int[,] {
+				{1,1,1,0,1,0,0 },
+				{1,1,0,1,0,1,0 },
+				{1,0,1,1,0,0,1 }
+			};
+			SyndromeCreator sc = new SyndromeCreator ();
+
+			int[] syndromes = sc.CreateSyndrome2 (7, HMatrix);
+
+
+				for (int j = 0; j < HMatrix.GetLength (0); j++) {
+					Console.Write (syndromes [j] );
+				}
+				Console.Write ("\n");
+
+		}
+		*/
 	}
 }

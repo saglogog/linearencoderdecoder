@@ -42,16 +42,22 @@ namespace LinearEncoderDecoderLibrary
 		// the one is in the second digit etc we get as the first syndrome the first column of H, the second syndrome is
 		// the second etc. In the case of the 00...0 error vector the syndrome is 000.
 
-		public Dictionary<int[], int []> CreateSyndrome(int n, int[,] HMatrix){
+		public Dictionary<int[], int []> CreateSyndrome(int[,] HMatrix){
 			
 			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
 			HelperClass hc = new HelperClass ();
 			//Get the error vectors array based on n and then convert ot jagged from multidimensional
-			int[][] errorVectors = hc.ConvertRectangulartoJaggedLtoA(CreateErrorVectors (n));
+			int[][] errorVectors = hc.ConvertRectangulartoJaggedLtoA(CreateErrorVectors (HMatrix.GetLength(1)));
 			int[][] syndromes = hc.ConvertRectangulartoJaggedCtoA (HMatrix);
+			int[] innerArrayS = new int[HMatrix.GetLength(0)];
+			int[] innerArrayEV = new int[HMatrix.GetLength(1)] ;
 
-			for (int i = 0; i < n ; i++) {
-				syndromeAndErrorVectorArray.Add (syndromes [i], errorVectors [i]);
+			for (int i = 0; i < HMatrix.GetLength(1)+1 ; i++) {
+				//Need to assign the inner arrays as such for the dictionary straightforward assignment doesnt appear to work
+				//However the afforementioned conviction must be tested further.
+				innerArrayS = syndromes [i];
+				innerArrayEV = errorVectors [i];
+				syndromeAndErrorVectorArray.Add (innerArrayS, innerArrayEV);
 			}
 
 			return syndromeAndErrorVectorArray;
@@ -59,7 +65,28 @@ namespace LinearEncoderDecoderLibrary
 
 
 		/*
-		 * OBSOLETE AND UNFINISHED
+		 * Method Created for testing purposes
+		public int[] CreateSyndrome2(int n, int[,] HMatrix){
+
+			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
+			HelperClass hc = new HelperClass ();
+			//Get the error vectors array based on n and then convert ot jagged from multidimensional
+			int[][] errorVectors = hc.ConvertRectangulartoJaggedLtoA(CreateErrorVectors (n));
+			int[][] syndromes = hc.ConvertRectangulartoJaggedCtoA (HMatrix);
+			int[] innerArrayS = new int[HMatrix.GetLength(0)];
+			int[] innerArrayEV = new int[HMatrix.GetLength(1)] ;
+
+			for (int i = 0; i < n ; i++) {
+				innerArrayS = syndromes [i];
+				innerArrayEV = errorVectors [i];
+				syndromeAndErrorVectorArray.Add (innerArrayS, innerArrayEV);
+			}
+
+			return innerArrayS;
+		}
+
+		/*
+		/* OBSOLETE AND UNFINISHED
 		public Dictionary<int[], int[]>  CreateSyndrome(int n, int[,]HMatrix){
 			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
 			int[,] errorVectors = CreateErrorVectors (n);
