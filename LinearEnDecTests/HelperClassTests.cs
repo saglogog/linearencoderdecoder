@@ -89,7 +89,7 @@ namespace LinearEnDecTests
 
 			Assert.AreEqual( expectedArray, hc.Multiply2DArrayByVector (TwoDMatrix, vector));
 		}
-
+		/** Make CreateDecimalFromBinary() to use 
 		[Test ()]
 		public void TestCreateDecimalFromBinary(){
 			//Arrange
@@ -101,10 +101,41 @@ namespace LinearEnDecTests
 			//Assert
 			Assert.AreEqual (expectedDecimal, actualDecimal);
 		}
+		*/
+
+		/*
+		 * Make CreateBinaryFromDecimal() to use 
+		[Test ()]
+		public void TestCreateBinaryFromDecimal(){
+			int decimalNumber = 875;
+			int[] expectedBinary = new int[]{ 1, 1, 0, 1, 1, 0, 1, 0, 1, 1 };
+
+			HelperClass hc = new HelperClass ();
+
+			Console.WriteLine ((int)Math.Floor (Math.Log (decimalNumber, 2)) + 1);
+
+			int[] actualBinary = hc.CreateBinaryFromDecimal (decimalNumber);
+
+			for (int i = 0; i < 10 ; i++) {
+				Console.Write (actualBinary [i]+" ");
+			
+			}
+		}
+		*/
 
 		[Test ()]
-		public void TestLogarithms(){
-			Console.WriteLine (Math.Log (53, 2));
+		public void TestSubtractBinaries(){
+			int[] binary1 = new int[]{ 1, 0, 0, 1, 1, 1, 0 };
+			int[] binary2 = new int[]{ 1, 1, 0, 1 };
+			int[] expectedResult = new int[]{ 1, 0, 0, 0, 0, 0, 1 };
+			HelperClass hc = new HelperClass ();
+
+			int[] actualResult = hc.SubtractBinaries (binary1, binary2);
+
+			for (int i = 0; i < 7; i++) {
+				Assert.AreEqual (expectedResult [i], actualResult [i]);
+				Console.Write (actualResult [i]);
+			}
 		}
 		/*Another test for the ConvertRectangulartoJaggedCtoA method
 		[Test ()]

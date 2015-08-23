@@ -1,13 +1,9 @@
-﻿<Properties StartupItem="LinearEncoderDecoderLibrary/LinearEncoderDecoderLibrary.csproj">
+﻿<Properties StartupItem="LinearEncoderDecoderInterface/LinearEncoderDecoderInterface.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderLibrary/HelperClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderInterface/MainWindow.cs">
     <Files>
-      <File FileName="LinearEncoderDecoderLibrary/SyndromeCreator.cs" Line="1" Column="1" />
-      <File FileName="LinearEncoderDecoderLibrary/Decoder.cs" Line="1" Column="1" />
-      <File FileName="LinearEncoderDecoderLibrary/HelperClass.cs" Line="150" Column="4" />
-      <File FileName="LinearEncoderDecoderLibrary/CodewordGenerator.cs" Line="1" Column="1" />
-      <File FileName="LinearEnDecTests/HelperClassTests.cs" Line="1" Column="1" />
-      <File FileName="LinearEncoderDecoderLibrary/Encoder.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderInterface/Program.cs" Line="4" Column="40" />
+      <File FileName="LinearEncoderDecoderInterface/MainWindow.cs" Line="16" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

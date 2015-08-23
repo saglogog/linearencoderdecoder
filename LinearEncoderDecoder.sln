@@ -5,12 +5,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearEncoderDecoderLibrary
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearEnDecTests", "LinearEnDecTests\LinearEnDecTests.csproj", "{C5BC11E8-E143-47BB-9690-60A3A4E7DF49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearEncoderDecoderInterface", "LinearEncoderDecoderInterface\LinearEncoderDecoderInterface.csproj", "{7284BFB1-B7C4-4F01-9B4B-9A7CFD230A35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7284BFB1-B7C4-4F01-9B4B-9A7CFD230A35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7284BFB1-B7C4-4F01-9B4B-9A7CFD230A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7284BFB1-B7C4-4F01-9B4B-9A7CFD230A35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7284BFB1-B7C4-4F01-9B4B-9A7CFD230A35}.Release|Any CPU.Build.0 = Release|Any CPU
 		{886D1428-1144-444D-A291-4507FD4C1A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{886D1428-1144-444D-A291-4507FD4C1A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{886D1428-1144-444D-A291-4507FD4C1A23}.Release|Any CPU.ActiveCfg = Release|Any CPU

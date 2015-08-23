@@ -118,40 +118,75 @@ namespace LinearEncoderDecoderLibrary
 
 		//use logarithm to calculate result[] digits,
 		//or use list to add elements dynamically.
-		private void CreateBinaryFromDecimal(double decimalNumber){
-			List<int> result = new List<int> ();
-			int i = 0;
+		//Opted for the first solution, since in that way we dont need to use a list, then "cast" the list to an an array and then
+		//reverse the array.
+		private int[] CreateBinaryFromDecimal(int decimalNumber){
+
+			//my tests have shown that the number of digits of the binary number corresponding to a given binary number equals the
+			//logarithm base 2 of the number rounded to the closest smaller decimal number(eg 5.3232 becomes 5) plus 1, or simply rounded 
+			//to the closest greater decimal (eg 5.3232 becomes 6), but I like the first approach better bc sometimes the log2 of the
+			// number is a number with no digits after the decimal point. I have not searched nor found 
+			//any mathematical proof to support that.
+			int[] result; 
+			double helper = decimalNumber;
+
 			if (decimalNumber == 0)
-				result.Add (0);	
+				result = new int[1]{ 0 };
 			else {
-				while (decimalNumber != 0) {
-
-					//result[-i] = decimalNumber % 2;
-					decimalNumber = Math.Floor (decimalNumber/2);
-					i++;
+				result = new int[(int)Math.Floor (Math.Log (decimalNumber, 2)) + 1];
+				for (int i =0; i<(int)Math.Floor (Math.Log (decimalNumber, 2)) + 1; i++) {
+					result [(int)(Math.Floor (Math.Log (decimalNumber, 2))) - i] = (int)(helper%2) ;
+					helper = Math.Floor(helper / 2);
 				}
-			}
-		}
-
-
-		//make private
-		public int CreateDecimalFromBinary(int[] binaryNumber){
-			int result = 0;
-			for (int i = 0; i < binaryNumber.Length; i++) {
-				if (binaryNumber [i] != 0 && binaryNumber [i] != 1) {
-					throw new FormatException ();
-					Console.WriteLine (i, "The digit in place {0} of the binary word array is not in binary form (0,1)");  
-				}
-				if (binaryNumber[i]==1)
-					result +=  Math.Pow (2, (binaryNumber.Length-1)-i);
 			}
 
 			return result;
 		}
-		/*
-		public int[] SubtractBinaries(int[] binary1, int[] binary2){
-			
+
+
+		//make private
+		private int CreateDecimalFromBinary(int[] binaryNumber){
+
+			int result = 0;
+
+			for (int i = 0; i < binaryNumber.Length; i++) {
+				if (binaryNumber [i] != 0 && binaryNumber [i] != 1) {
+					Console.WriteLine ("The digit in place {0} of the binary word array is not in binary form (0,1)", i); 
+					throw new FormatException (); 
+				}
+				if (binaryNumber[i]==1)
+					result +=  (int)Math.Pow (2, (binaryNumber.Length-1)-i);
+			}
+
+			return result;
 		}
-		*/
+
+		/// <summary>
+		/// Subtracts binary2 from binary1.
+		/// </summary>
+		/// <returns>The result of the subtraction(difference).</returns>
+		/// <param name="binary1">The minuend.</param>
+		/// <param name="binary2">The subtrahend.</param>
+		public int[] SubtractBinaries(int[] binary1, int[] binary2){
+			int decimal1 = CreateDecimalFromBinary (binary1);
+			int decimal2 = CreateDecimalFromBinary (binary2);
+
+			int decimalDifference = decimal1 - decimal2;
+			int[] binaryDifference = CreateBinaryFromDecimal (decimalDifference);
+
+			return binaryDifference;
+		}
+
+
+		public int[] ReverseIntArray(int[] originalArray){
+			
+			int[] reversedArray = new int[originalArray.Length];
+
+			for (int i = 0; i < originalArray.Length; i++) {
+				reversedArray [i] = originalArray [(originalArray.Length - 1) - i];
+			}
+
+			return reversedArray;
+		}
 	}
 }

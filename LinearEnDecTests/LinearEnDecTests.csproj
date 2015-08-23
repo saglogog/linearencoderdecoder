@@ -48,6 +48,7 @@
     <Compile Include="PropertyClassTests.cs" />
     <Compile Include="SyndromeCreatorTests.cs" />
     <Compile Include="HelperClassTests.cs" />
+    <Compile Include="DecoderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
