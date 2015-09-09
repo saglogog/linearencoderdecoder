@@ -4,3 +4,11 @@
 /Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderInterface.exe
 /Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Debug/LinearEncoderDecoderInterface.exe
 /Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Debug/LinearEncoderDecoderInterface.exe.mdb
+/home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Debug/LinearEncoderDecoderInterface.gtk-gui.gui.stetic
+/home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderInterface.exe.mdb
+/home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderInterface.exe
+/home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Debug/LinearEncoderDecoderInterface.exe
+/home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Debug/LinearEncoderDecoderInterface.exe.mdb
+/home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderLibrary.dll
+/home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderLibrary.dll.mdb

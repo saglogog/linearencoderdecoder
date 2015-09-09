@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="LinearEncoderDecoderInterface/LinearEncoderDecoderInterface.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderInterface/MainWindow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderInterface/ErrorWindow.cs">
     <Files>
-      <File FileName="LinearEncoderDecoderInterface/Program.cs" Line="4" Column="40" />
-      <File FileName="LinearEncoderDecoderInterface/MainWindow.cs" Line="16" Column="3" />
+      <File FileName="LinearEncoderDecoderInterface/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderInterface/ErrorWindow.cs" Line="13" Column="3" />
+      <File FileName="LinearEncoderDecoderInterface/Program.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderInterface/ShowGandHBasedOnP.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
