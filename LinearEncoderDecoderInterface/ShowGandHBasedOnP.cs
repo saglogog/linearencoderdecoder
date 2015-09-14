@@ -21,7 +21,7 @@ namespace LinearEncoderDecoderInterface
 	{
 		public event ErrorWindowEventHandler ErrorOccured;
 
-		public void GenerateG(string p){
+		public string GenerateG(string p){
 			
 			this.ErrorOccured += new ErrorWindowEventHandler(CreateErrorWindow);
 
@@ -30,14 +30,10 @@ namespace LinearEncoderDecoderInterface
 
 			if (ca [ca.Length - 1] != '\n') {
 				ca2 = new char[ca.Length + 1];
-				for (int i = 0; i < ca2.Length; i++) {
-					if (ca2 [i] != ca2 [ca2.Length - 1])
-						ca2 [i] = ca [i];
-					else
-						ca2 [i] = '\n';
-				}
+				ca.CopyTo (ca2, 0);
+				ca2 [ca2.Length - 1] = '\n';
 			} else {
-				ca2= new char[ca.Length];
+				ca2 = new char[ca.Length];
 				ca.CopyTo (ca2, 0);
 			}
 			
@@ -45,19 +41,25 @@ namespace LinearEncoderDecoderInterface
 
 			int j = 0;
 			int h = -1;
-			for (int i =0; i<ca2.Length;i++) {
+			ErrorWindowEventArgs ewea = null;
+			for (int i = 0; i < ca2.Length; i++) {
 				if (ca2 [i] != '\n')
 					j++;
 				else {
-					if (h != -1 && h != j) {
+					if (h != -1 && h != j && ewea == null) {
 						//show window with error explaining that this array doesnt have the correct format. 
-						ErrorWindowEventArgs ewea = new ErrorWindowEventArgs("The P Array does not have the correct format!");
+						ewea = new ErrorWindowEventArgs ("The P Array does not have the correct format!");
 						ErrorOccured (this, ewea);
 					}
 					h = j;
 					j = 0;
 				}
 			}
+				
+
+			string ca3 = new string(ca2);
+
+			return ca3;
 		}
 
 		public void CreateErrorWindow(object sender, ErrorWindowEventArgs e){
@@ -65,6 +67,20 @@ namespace LinearEncoderDecoderInterface
 			ErrorWindow ew = new ErrorWindow (e._labelMessage);
 			ew.Show ();
 		}
+
+		public int[,] ConvertCharArrayTo2DIntArray(char[] charArray, char delimiter){
+			int rowCounter = 0;
+			//count how many rows
+			while (charArray [rowCounter] != delimiter) {
+				rowCounter++;
+			}
+
+			//count how many lines taking into account the delimiter
+			int lines = charArray.Length/(rowCounter+1);
+
+			int[,] TwoDimArray = new int[lines, rowCounter];
+
+			return TwoDimArray;
+		}
 	}
 }
-

@@ -1,3 +1,6 @@
 <ListOfTask>
   <Task file="" description="Test CorrectCodeword() in Decoder.cs in LinearEncoderDecoderLibrary" completed="True" />
+  <Task file="" description="Fix multiple ErrorWindow problem in ShowGandHBasedOnP.GenerateG()." completed="True" />
+  <Task file="" description="Fix possible lack of newline character in end of textview1 string." completed="True" />
+  <Task file="" description="Add all conversions from array to array etc. to a single class that inherits from IConvertible..." />
 </ListOfTask>

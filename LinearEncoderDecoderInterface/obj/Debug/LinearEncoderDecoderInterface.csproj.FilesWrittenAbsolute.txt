@@ -12,3 +12,5 @@
 /home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Debug/LinearEncoderDecoderInterface.exe.mdb
 /home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderLibrary.dll
 /home/sag/Projects/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderLibrary.dll.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderLibrary.dll
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Debug/LinearEncoderDecoderLibrary.dll.mdb

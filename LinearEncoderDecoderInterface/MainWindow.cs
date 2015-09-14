@@ -24,6 +24,7 @@ public partial class MainWindow: Gtk.Window
 			Console.Write (ch);
 		}
 		ShowGandHBasedOnP s = new ShowGandHBasedOnP ();
-		s.GenerateG (textview1.Buffer.Text);
+		textview4.Buffer.Text = s.GenerateG (textview1.Buffer.Text);
+
 	}
 }
