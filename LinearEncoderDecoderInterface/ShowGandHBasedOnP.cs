@@ -4,8 +4,9 @@ using LinearEncoderDecoderLibrary;
 
 namespace LinearEncoderDecoderInterface
 {
+
 	//delegate for the event 
-	public delegate void ErrorWindowEventHandler(object sender, EventArgs e);  
+	public delegate void ErrorWindowEventHandler(object sender, ErrorWindowEventArgs e);  
 
 	public class ErrorWindowEventArgs: EventArgs{
 		public readonly string _labelMessage;
@@ -13,36 +14,56 @@ namespace LinearEncoderDecoderInterface
 		public ErrorWindowEventArgs(string labelMessage){
 			_labelMessage = labelMessage;
 		}
-	
+
 	}
 
 	public class ShowGandHBasedOnP
 	{
-		
 		public event ErrorWindowEventHandler ErrorOccured;
 
-		protected virtual void OnErrorOccured(EventArgs e){
-			ErrorOccured (this, e);
-		}
-
 		public void GenerateG(string p){
+			
+			this.ErrorOccured += new ErrorWindowEventHandler(CreateErrorWindow);
+
 			char[] ca = p.ToCharArray ();
+			char[] ca2;
+
+			if (ca [ca.Length - 1] != '\n') {
+				ca2 = new char[ca.Length + 1];
+				for (int i = 0; i < ca2.Length; i++) {
+					if (ca2 [i] != ca2 [ca2.Length - 1])
+						ca2 [i] = ca [i];
+					else
+						ca2 [i] = '\n';
+				}
+			} else {
+				ca2= new char[ca.Length];
+				ca.CopyTo (ca2, 0);
+			}
+			
 			int[,] P;
+
 			int j = 0;
 			int h = -1;
-			ErrorWindowEventArgs e = new ErrorWindowEventArgs ("The number of lines do not match the number of columns");
-			for (int i =0; i<ca.Length;i++) {
-				if (ca [i] != '\n')
+			for (int i =0; i<ca2.Length;i++) {
+				if (ca2 [i] != '\n')
 					j++;
 				else {
 					if (h != -1 && h != j) {
 						//show window with error explaining that this array doesnt have the correct format. 
-						OnErrorOccured(e);
+						ErrorWindowEventArgs ewea = new ErrorWindowEventArgs("The P Array does not have the correct format!");
+						ErrorOccured (this, ewea);
 					}
 					h = j;
 					j = 0;
 				}
 			}
+		}
+
+		public void CreateErrorWindow(object sender, ErrorWindowEventArgs e){
+			//add label message from eventargs property
+			ErrorWindow ew = new ErrorWindow (e._labelMessage);
+			ew.Show ();
 		}
 	}
 }

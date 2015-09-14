@@ -431,10 +431,13 @@
           <widget class="Gtk.Label" id="label1">
             <property name="MemberName" />
             <property name="LabelProp" translatable="yes">label1</property>
+            <property name="UseUnderline">True</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
           </widget>
           <packing>
-            <property name="X">193</property>
-            <property name="Y">63</property>
+            <property name="X">3</property>
+            <property name="Y">21</property>
           </packing>
         </child>
       </widget>
