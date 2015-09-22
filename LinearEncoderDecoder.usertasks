@@ -5,5 +5,7 @@
   <Task file="" description="Add all conversions from array to array etc. to a single class that inherits from IConvertible..." />
   <Task file="" description="Transfer the conversion method in the helper class and finsih the GenerateG method." completed="True" />
   <Task file="" description="Make converter method from 2D int[,] to string in helperclass. " completed="True" />
-  <Task file="" description="Find out why the G and H arrays are not generated properly in the interface." />
+  <Task file="" description="Find out why the G and H arrays are not generated properly in the interface." completed="True" />
+  <Task file="" description="Find out why application crashes when ErrorOccured event is triggered" />
+  <Task file="" description="Add check in ShowGandHBasedOnP.ReturnPArray() for the case of the P array not have been entered at all( trigger erroroccured event and show corresponding window" />
 </ListOfTask>

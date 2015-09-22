@@ -32,4 +32,11 @@ public partial class MainWindow: Gtk.Window
 		textview4.Buffer.Text = hc.Convert2DIntArrayToString(s.GenerateG (textview1.Buffer.Text),'\n');
 		textview5.Buffer.Text = hc.Convert2DIntArrayToString (s.GenerateH (textview1.Buffer.Text),'\n');
 	}
+
+	protected void button2_click (object sender, EventArgs e)
+	{
+		ShowCodewordsBasedOnP sc = new ShowCodewordsBasedOnP ();
+		HelperClass hc = new HelperClass ();
+		textview6.Buffer.Text = hc.Convert2DIntArrayToString (sc.GenerateCodewords (textview1.Buffer.Text), '\n');
+	}
 }

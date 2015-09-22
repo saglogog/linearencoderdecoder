@@ -1,30 +1,30 @@
 ﻿<Properties StartupItem="LinearEncoderDecoderInterface/LinearEncoderDecoderInterface.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEnDecTests/MockSetupClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderInterface/MainWindow.cs">
     <Files>
       <File FileName="LinearEncoderDecoderInterface/ShowGandHBasedOnP.cs" Line="28" Column="4" />
       <File FileName="LinearEncoderDecoderInterface/MainWindow.cs" Line="32" Column="98" />
-      <File FileName="LinearEncoderDecoderLibrary/MatrixCreator.cs" Line="25" Column="5" />
-      <File FileName="LinearEncoderDecoderLibrary/HelperClass.cs" Line="1" Column="1" />
-      <File FileName="LinearEnDecTests/HelperClassTests.cs" Line="194" Column="23" />
-      <File FileName="LinearEnDecTests/MockSetupClass.cs" Line="18" Column="36" />
-      <File FileName="LinearEnDecTests/PropertyClassTests.cs" Line="21" Column="40" />
     </Files>
     <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LinearEncoderDecoder" expanded="True">
+            <Node name="LinearEncoderDecoderInterface" expanded="True">
+              <Node name="MainWindow.cs" selected="True" />
+            </Node>
+            <Node name="LinearEncoderDecoderLibrary" expanded="True" />
+            <Node name="LinearEnDecTests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
         <State name="__root__">
           <Node name="LinearEncoderDecoder" expanded="True">
             <Node name="LinearEnDecTests" expanded="True">
               <Node name="LinearEnDecTests" expanded="True">
-                <Node name="CodewordGeneratorTests" expanded="True" />
-                <Node name="DecoderTests" expanded="True" />
-                <Node name="EncoderTests" expanded="True" />
-                <Node name="HelperClassTests" expanded="True" />
-                <Node name="MatrixCreatorTests" expanded="True" />
-                <Node name="PropertyClassTests" expanded="True">
-                  <Node name="TestCase" selected="True" />
+                <Node name="MatrixCreatorTests" expanded="True">
+                  <Node name="TestHCreator" selected="True" />
                 </Node>
-                <Node name="SyndromeCreatorTests" expanded="True" />
               </Node>
             </Node>
           </Node>

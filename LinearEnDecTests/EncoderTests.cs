@@ -2,6 +2,7 @@
 using System;
 using LinearEnDecTests;
 using LinearEncoderDecoderLibrary;
+using System.Threading;
 
 namespace LinearEnDecTests
 {
@@ -20,7 +21,11 @@ namespace LinearEnDecTests
 			//--PropertyClass pc = new PropertyClass ();
 			//--int[,] PMatrix = pc.PArray;
 			int[,] PMatrix = PropertyClass.PArray;
-			int[] theWord = {0,1,1};
+			Random rd = new Random ();
+			int[] theWord = new int[PropertyClass.PArray.GetLength(0)];
+			for (int i = 0; i < PropertyClass.PArray.GetLength (0); i++) {
+				theWord [i] = rd.Next () % 2;
+			}
 			Encoder enc = new Encoder();
 			int[] extraBits = enc.Encode (theWord);
 			int[] codeword = enc.CodewordCreator (theWord);

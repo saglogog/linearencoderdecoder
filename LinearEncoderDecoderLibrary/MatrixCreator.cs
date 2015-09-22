@@ -75,10 +75,9 @@ namespace LinearEncoderDecoderLibrary
 				for (int i = 0; i < (intPMatrix.GetLength (0) + intPMatrix.GetLength (1)) - intPMatrix.GetLength (0); i++) {
 					for (int j = 0; j < intPMatrix.GetLength (0) + intPMatrix.GetLength (1); j++) {
 						//PMatrix.GetLength(0) = k = Ptranspose columns
-						if (j > intPMatrix.GetLength (0)) {
+						if (j >= intPMatrix.GetLength (0)) {
 							//same as in G matrix as to length twn columns tis IkMatrix = n-k kai to length olwn twn columns einai = n 
-							HMatrix[i,j]=IkMatrix[i,j-(intPMatrix.GetLength(1)-1)];
-
+							HMatrix[i,j]=IkMatrix[i,j-(intPMatrix.GetLength(0))];
 						} else {
 							HMatrix [i, j] = pt [i, j];
 						}
