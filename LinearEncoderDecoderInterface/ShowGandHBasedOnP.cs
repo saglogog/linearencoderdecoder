@@ -19,9 +19,11 @@ namespace LinearEncoderDecoderInterface
 
 	public class ShowGandHBasedOnP
 	{
+		
 		public event ErrorWindowEventHandler ErrorOccured;
 
-		public string GenerateG(string p){
+
+		public int[,] ReturnPArray(string p){
 			
 			this.ErrorOccured += new ErrorWindowEventHandler(CreateErrorWindow);
 
@@ -36,8 +38,6 @@ namespace LinearEncoderDecoderInterface
 				ca2 = new char[ca.Length];
 				ca.CopyTo (ca2, 0);
 			}
-			
-			int[,] P;
 
 			int j = 0;
 			int h = -1;
@@ -56,10 +56,35 @@ namespace LinearEncoderDecoderInterface
 				}
 			}
 				
+			HelperClass hc = new HelperClass ();
+			int[,] P = null;
+			try{
+				P = hc.ConvertCharArrayTo2DIntArray (ca2, '\n');
+			}
+			catch(ArgumentException e){
+				ErrorWindowEventArgs ewea2 = new ErrorWindowEventArgs ("Some of the P array arguments are not 0s or 1s !");
+				ErrorOccured (e, ewea2);
+			}
+				
+			return P;
+		}
 
-			string ca3 = new string(ca2);
+		public int[,] GenerateG(string p){
 
-			return ca3;
+			PropertyClass.PArray = ReturnPArray (p);
+
+			MatrixCreator mc = new MatrixCreator ();
+
+			return mc.GCreator ();
+		}
+
+		public int[,] GenerateH(string p){
+
+			PropertyClass.PArray = ReturnPArray (p);			
+
+			MatrixCreator mc = new MatrixCreator ();
+
+			return mc.HCreator ();
 		}
 
 		public void CreateErrorWindow(object sender, ErrorWindowEventArgs e){
@@ -67,20 +92,6 @@ namespace LinearEncoderDecoderInterface
 			ErrorWindow ew = new ErrorWindow (e._labelMessage);
 			ew.Show ();
 		}
-
-		public int[,] ConvertCharArrayTo2DIntArray(char[] charArray, char delimiter){
-			int rowCounter = 0;
-			//count how many rows
-			while (charArray [rowCounter] != delimiter) {
-				rowCounter++;
-			}
-
-			//count how many lines taking into account the delimiter
-			int lines = charArray.Length/(rowCounter+1);
-
-			int[,] TwoDimArray = new int[lines, rowCounter];
-
-			return TwoDimArray;
-		}
+			
 	}
 }

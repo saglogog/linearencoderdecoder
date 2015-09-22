@@ -188,5 +188,59 @@ namespace LinearEncoderDecoderLibrary
 
 			return reversedArray;
 		}
+
+		/// <summary>
+		/// Converts a character array to 2D int array, where each character is a digit and only the digits of 1 and 0 are 
+		/// allowed.
+		/// </summary>
+		/// <returns>The 2D int array.</returns>
+		/// <param name="charArray">Character array.</param>
+		/// <param name="delimiter">Delimiter.</param>
+		public int[,] ConvertCharArrayTo2DIntArray(char[] charArray, char delimiter){
+			int columnCounter = 0;
+			//count how many rows
+			while (charArray [columnCounter] != delimiter) {
+				columnCounter++;
+			}
+
+			//count how many lines taking into account the delimiter
+			int rows = charArray.Length/(columnCounter+1);
+
+			int[,] twoDimArray = new int[rows, columnCounter];
+
+			//count
+			int h = 0;
+			for (int i = 0; i < rows; i++) {
+				for (int j = 0; j < columnCounter; j++) {
+						twoDimArray [i, j] = (int)Char.GetNumericValue(charArray [h]);
+						//throw exception if the array contains numbers other than 1 or 0
+						if (twoDimArray [i, j] != 1 && twoDimArray [i, j] != 0)
+							throw new ArgumentException ();
+						h++;
+				}
+				h++;
+			}
+			return twoDimArray;
+		}
+
+		/// <summary>
+		/// Converts a 2-dimensional integer array to a string with a specific delimiter
+		/// between each row. 
+		/// </summary>
+		/// <returns>The string.</returns>
+		/// <param name="twoDimArray">The 2-dimensional integer array.</param>
+		/// <param name="delimiter">The delimiter that divises the rows of the array in string form.</param>
+		public string Convert2DIntArrayToString(int[,] twoDimArray, char delimiter){
+
+			string output = null;
+			for (int i = 0; i < twoDimArray.GetLength (0); i++) {
+				for (int j = 0; j < twoDimArray.GetLength (1); j++) {
+					output += twoDimArray [i, j].ToString ();
+				}
+				output += delimiter;
+			}
+
+			return output;
+		}
 	}
 }

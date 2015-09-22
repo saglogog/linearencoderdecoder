@@ -1,6 +1,7 @@
 ﻿using System;
 using Gtk;
 using LinearEncoderDecoderInterface;
+using LinearEncoderDecoderLibrary;
 
 public partial class MainWindow: Gtk.Window
 {
@@ -17,6 +18,8 @@ public partial class MainWindow: Gtk.Window
 		
 	protected void button1_click (object sender, EventArgs e)
 	{
+		textview4.Buffer.Text = "";
+		textview5.Buffer.Text = "";
 		TextBuffer buffer = textview1.Buffer;
 		char[] ca = buffer.Text.ToCharArray ();
 
@@ -24,7 +27,9 @@ public partial class MainWindow: Gtk.Window
 			Console.Write (ch);
 		}
 		ShowGandHBasedOnP s = new ShowGandHBasedOnP ();
-		textview4.Buffer.Text = s.GenerateG (textview1.Buffer.Text);
-
+		HelperClass hc = new HelperClass ();
+		//textview4.Buffer.Text = s.ReturnPArray (textview1.Buffer.Text);
+		textview4.Buffer.Text = hc.Convert2DIntArrayToString(s.GenerateG (textview1.Buffer.Text),'\n');
+		textview5.Buffer.Text = hc.Convert2DIntArrayToString (s.GenerateH (textview1.Buffer.Text),'\n');
 	}
 }

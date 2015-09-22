@@ -5,7 +5,6 @@ namespace LinearEncoderDecoderLibrary
 	public class MatrixCreator
 	{
 		int[,] intPMatrix;
-		int [,] IkMatrix;
 		//--PropertyClass pc = new PropertyClass();
 
 		/// <summary>
@@ -28,18 +27,22 @@ namespace LinearEncoderDecoderLibrary
 
 		//G = [Ik|P]
 		public int[,] GCreator(){
+			int [,] IkMatrix;
 			IkMatrix = IdentityArrayCreator (intPMatrix.GetLength (0));
 			int[,] GMatrix = new int[intPMatrix.GetLength (0), intPMatrix.GetLength (0) + intPMatrix.GetLength (1)];
 			try{
-				for (int k = 0; k < intPMatrix.GetLength (0); k++) {
-					for (int n = 0; n < intPMatrix.GetLength (0) + intPMatrix.GetLength (1); n++) {
+				for (int k = 0; k < GMatrix.GetLength (0); k++) {
+					for (int n = 0; n < GMatrix.GetLength(1); n++) {
 						//when n>tis statheris posotitas=arithmos grammwn(rows) tou P)
-						if (n >= intPMatrix.GetLength(0)) {
+
+						if (n >= IkMatrix.GetLength(0)) {
 							// G[k,n] = P[k,n-(n-k)], the n portion varies while the n-k is stable in P 
-							GMatrix [k, n] = intPMatrix [k, n - ((intPMatrix.GetLength (0) + intPMatrix.GetLength (1)) - intPMatrix.GetLength (0)-1)];
+							GMatrix [k, n] = intPMatrix [k, n - (GMatrix.GetLength(1) - intPMatrix.GetLength (1))];
+
 						} else {
 							GMatrix [k, n] = IkMatrix [k, n];
 						}
+
 					}
 				}
 			}
@@ -61,8 +64,9 @@ namespace LinearEncoderDecoderLibrary
 
 		//H = [Ptrasnpose|In-k]
 		public int[,] HCreator(){
+			int [,] IkMatrix;
 			//IkMatrix = In-k
-			IkMatrix = IdentityArrayCreator ((intPMatrix.GetLength (0) + intPMatrix.GetLength (1)) - intPMatrix.GetLength (0));
+			IkMatrix = IdentityArrayCreator (intPMatrix.GetLength(1));
 			//Ptranspose
 			int[,] pt = MatrixTransposer(intPMatrix);
 			//n-k rows , n columns( n-k from In-k and k from Ptranspose)
@@ -71,9 +75,10 @@ namespace LinearEncoderDecoderLibrary
 				for (int i = 0; i < (intPMatrix.GetLength (0) + intPMatrix.GetLength (1)) - intPMatrix.GetLength (0); i++) {
 					for (int j = 0; j < intPMatrix.GetLength (0) + intPMatrix.GetLength (1); j++) {
 						//PMatrix.GetLength(0) = k = Ptranspose columns
-						if (j >= intPMatrix.GetLength (0)) {
+						if (j > intPMatrix.GetLength (0)) {
 							//same as in G matrix as to length twn columns tis IkMatrix = n-k kai to length olwn twn columns einai = n 
-							HMatrix[i,j]=IkMatrix[i,j-((intPMatrix.GetLength (0) + intPMatrix.GetLength (1)) - intPMatrix.GetLength (0)-1)];
+							HMatrix[i,j]=IkMatrix[i,j-(intPMatrix.GetLength(1)-1)];
+
 						} else {
 							HMatrix [i, j] = pt [i, j];
 						}
@@ -87,9 +92,8 @@ namespace LinearEncoderDecoderLibrary
 		}
 
 		public int[,] ReturnPMatrix(){
-			int[,] thePMatix = intPMatrix;
-			return thePMatix;
+			int[,] thePMatrix = intPMatrix;
+			return thePMatrix;
 		}
 	}
 }
-

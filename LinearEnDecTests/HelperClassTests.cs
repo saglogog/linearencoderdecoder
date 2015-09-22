@@ -165,5 +165,40 @@ namespace LinearEnDecTests
 			}
 		}
 		*/
+
+		[Test()]
+		public void TestConvertCharArrayTo2DIntArray(){
+			HelperClass hc = new HelperClass ();
+			int[,] twoDimArrayExpected = new int[,]{ 
+				{ 0, 1, 0, 1, 1 },
+				{ 1, 1, 1, 1, 1 },
+				{ 0, 1, 1, 1, 0 },
+				{ 0, 1, 0, 1, 0 } };
+			char[] charArray = new char[] {'0','1','0','1','1','\n','1','1','1','1','1','\n','0','1','1','1','0','\n','0','1','0','1','0','\n'};
+			int[,] twoDimArrayActual = hc.ConvertCharArrayTo2DIntArray (charArray, '\n');
+			for (int i = 0; i < twoDimArrayExpected.GetLength (0); i++) {
+				for (int j = 0; j < twoDimArrayExpected.GetLength (1); j++) {
+					Console.Write (twoDimArrayActual [i,j]);
+					Assert.AreEqual(twoDimArrayExpected[i,j],twoDimArrayActual[i,j]);
+					if (j == twoDimArrayExpected.GetLength (1) - 1) {
+						Console.Write ("\n");
+					}
+				}
+			}
+		}
+
+		[Test()]
+		public void TestConvert2DIntArrayToString(){
+			int[,] twoDimArrayExpected = new int[,]{ 
+				{ 0, 1, 0, 1, 1 },
+				{ 1, 1, 1, 1, 1 },
+				{ 0, 1, 1, 1, 0 },
+				{ 0, 1, 0, 1, 0 } };
+			MockSetupClass msc = new MockSetupClass ();
+			msc.FillMatrix ();
+			HelperClass hc = new HelperClass ();
+
+			Console.WriteLine (hc.Convert2DIntArrayToString(twoDimArrayExpected,'\n'));
+		}
 	}
 }

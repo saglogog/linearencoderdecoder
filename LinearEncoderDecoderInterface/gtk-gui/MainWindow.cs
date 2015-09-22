@@ -23,7 +23,7 @@ public partial class MainWindow
 	
 	private global::Gtk.Label label5;
 	
-	private global::Gtk.ScrolledWindow GtkScrolledWindow;
+	private global::Gtk.ScrolledWindow GtkScrolledWindow1;
 	
 	private global::Gtk.TextView textview4;
 	
@@ -31,7 +31,7 @@ public partial class MainWindow
 	
 	private global::Gtk.Label label6;
 	
-	private global::Gtk.ScrolledWindow GtkScrolledWindow1;
+	private global::Gtk.ScrolledWindow GtkScrolledWindow2;
 	
 	private global::Gtk.TextView textview5;
 	
@@ -39,7 +39,7 @@ public partial class MainWindow
 	
 	private global::Gtk.Label label7;
 	
-	private global::Gtk.ScrolledWindow GtkScrolledWindow2;
+	private global::Gtk.ScrolledWindow GtkScrolledWindow3;
 	
 	private global::Gtk.TextView textview6;
 	
@@ -57,7 +57,7 @@ public partial class MainWindow
 	
 	private global::Gtk.Label label10;
 	
-	private global::Gtk.ScrolledWindow GtkScrolledWindow3;
+	private global::Gtk.ScrolledWindow GtkScrolledWindow4;
 	
 	private global::Gtk.TextView textview7;
 	
@@ -71,7 +71,7 @@ public partial class MainWindow
 	
 	private global::Gtk.Label label11;
 	
-	private global::Gtk.ScrolledWindow GtkScrolledWindow4;
+	private global::Gtk.ScrolledWindow GtkScrolledWindow6;
 	
 	private global::Gtk.TextView textview8;
 
@@ -150,18 +150,18 @@ public partial class MainWindow
 		w6.Expand = false;
 		w6.Fill = false;
 		// Container child vbox4.Gtk.Box+BoxChild
-		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
-		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
-		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+		this.GtkScrolledWindow1 = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow1.Name = "GtkScrolledWindow1";
+		this.GtkScrolledWindow1.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow1.Gtk.Container+ContainerChild
 		this.textview4 = new global::Gtk.TextView ();
 		this.textview4.CanFocus = true;
 		this.textview4.Name = "textview4";
 		this.textview4.Editable = false;
 		this.textview4.CursorVisible = false;
-		this.GtkScrolledWindow.Add (this.textview4);
-		this.vbox4.Add (this.GtkScrolledWindow);
-		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.GtkScrolledWindow]));
+		this.GtkScrolledWindow1.Add (this.textview4);
+		this.vbox4.Add (this.GtkScrolledWindow1);
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox4 [this.GtkScrolledWindow1]));
 		w8.Position = 1;
 		this.hbox2.Add (this.vbox4);
 		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.vbox4]));
@@ -182,18 +182,18 @@ public partial class MainWindow
 		w10.Expand = false;
 		w10.Fill = false;
 		// Container child vbox5.Gtk.Box+BoxChild
-		this.GtkScrolledWindow1 = new global::Gtk.ScrolledWindow ();
-		this.GtkScrolledWindow1.Name = "GtkScrolledWindow1";
-		this.GtkScrolledWindow1.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child GtkScrolledWindow1.Gtk.Container+ContainerChild
+		this.GtkScrolledWindow2 = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow2.Name = "GtkScrolledWindow2";
+		this.GtkScrolledWindow2.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow2.Gtk.Container+ContainerChild
 		this.textview5 = new global::Gtk.TextView ();
 		this.textview5.CanFocus = true;
 		this.textview5.Name = "textview5";
 		this.textview5.Editable = false;
 		this.textview5.CursorVisible = false;
-		this.GtkScrolledWindow1.Add (this.textview5);
-		this.vbox5.Add (this.GtkScrolledWindow1);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.GtkScrolledWindow1]));
+		this.GtkScrolledWindow2.Add (this.textview5);
+		this.vbox5.Add (this.GtkScrolledWindow2);
+		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.GtkScrolledWindow2]));
 		w12.Position = 1;
 		this.hbox2.Add (this.vbox5);
 		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.vbox5]));
@@ -222,16 +222,16 @@ public partial class MainWindow
 		w16.Expand = false;
 		w16.Fill = false;
 		// Container child vbox6.Gtk.Box+BoxChild
-		this.GtkScrolledWindow2 = new global::Gtk.ScrolledWindow ();
-		this.GtkScrolledWindow2.Name = "GtkScrolledWindow2";
-		this.GtkScrolledWindow2.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child GtkScrolledWindow2.Gtk.Container+ContainerChild
+		this.GtkScrolledWindow3 = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow3.Name = "GtkScrolledWindow3";
+		this.GtkScrolledWindow3.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow3.Gtk.Container+ContainerChild
 		this.textview6 = new global::Gtk.TextView ();
 		this.textview6.CanFocus = true;
 		this.textview6.Name = "textview6";
-		this.GtkScrolledWindow2.Add (this.textview6);
-		this.vbox6.Add (this.GtkScrolledWindow2);
-		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.GtkScrolledWindow2]));
+		this.GtkScrolledWindow3.Add (this.textview6);
+		this.vbox6.Add (this.GtkScrolledWindow3);
+		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox6 [this.GtkScrolledWindow3]));
 		w18.Position = 1;
 		// Container child vbox6.Gtk.Box+BoxChild
 		this.button2 = new global::Gtk.Button ();
@@ -296,16 +296,16 @@ public partial class MainWindow
 		w24.Expand = false;
 		w24.Fill = false;
 		// Container child vbox7.Gtk.Box+BoxChild
-		this.GtkScrolledWindow3 = new global::Gtk.ScrolledWindow ();
-		this.GtkScrolledWindow3.Name = "GtkScrolledWindow3";
-		this.GtkScrolledWindow3.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child GtkScrolledWindow3.Gtk.Container+ContainerChild
+		this.GtkScrolledWindow4 = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow4.Name = "GtkScrolledWindow4";
+		this.GtkScrolledWindow4.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow4.Gtk.Container+ContainerChild
 		this.textview7 = new global::Gtk.TextView ();
 		this.textview7.CanFocus = true;
 		this.textview7.Name = "textview7";
-		this.GtkScrolledWindow3.Add (this.textview7);
-		this.vbox7.Add (this.GtkScrolledWindow3);
-		global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.GtkScrolledWindow3]));
+		this.GtkScrolledWindow4.Add (this.textview7);
+		this.vbox7.Add (this.GtkScrolledWindow4);
+		global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.vbox7 [this.GtkScrolledWindow4]));
 		w26.Position = 4;
 		this.hbox3.Add (this.vbox7);
 		global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.vbox7]));
@@ -357,16 +357,16 @@ public partial class MainWindow
 		w31.Expand = false;
 		w31.Fill = false;
 		// Container child vbox8.Gtk.Box+BoxChild
-		this.GtkScrolledWindow4 = new global::Gtk.ScrolledWindow ();
-		this.GtkScrolledWindow4.Name = "GtkScrolledWindow4";
-		this.GtkScrolledWindow4.ShadowType = ((global::Gtk.ShadowType)(1));
-		// Container child GtkScrolledWindow4.Gtk.Container+ContainerChild
+		this.GtkScrolledWindow6 = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow6.Name = "GtkScrolledWindow6";
+		this.GtkScrolledWindow6.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow6.Gtk.Container+ContainerChild
 		this.textview8 = new global::Gtk.TextView ();
 		this.textview8.CanFocus = true;
 		this.textview8.Name = "textview8";
-		this.GtkScrolledWindow4.Add (this.textview8);
-		this.vbox8.Add (this.GtkScrolledWindow4);
-		global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.GtkScrolledWindow4]));
+		this.GtkScrolledWindow6.Add (this.textview8);
+		this.vbox8.Add (this.GtkScrolledWindow6);
+		global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.vbox8 [this.GtkScrolledWindow6]));
 		w33.Position = 4;
 		this.hbox3.Add (this.vbox8);
 		global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.vbox8]));

@@ -21,6 +21,14 @@ namespace LinearEnDecTests
 			int[,] matrix = setup.FillMatrix ();
 			int[,] pArray = PropertyClass.PArray;
 
+			Console.WriteLine ();
+			for (int i = 0; i < PropertyClass.PArray.GetLength (0); i++) {
+				for (int j = 0; j <	PropertyClass.PArray.GetLength (1); j++) {
+					Console.Write (PropertyClass.PArray [i, j]);
+				}
+				Console.WriteLine ();
+			}
+
 			Assert.AreEqual (matrix, pArray);
 		}
 	}

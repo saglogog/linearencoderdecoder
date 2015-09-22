@@ -7,21 +7,23 @@ namespace LinearEnDecTests
 	[TestFixture ()]
 	public class MatrixCreatorTests
 	{
-		MockSetupClass msc = new MockSetupClass ();
-		MatrixCreator mc = new MatrixCreator ();
+
 
 		[Test ()]
 		public void TestGCreator ()
 		{
-			msc.FillMatrix ();
+			MockSetupClass msc = new MockSetupClass ();
+			if(PropertyClass.PArray==null){
+				msc.FillMatrix ();
+			}
+			MatrixCreator mc = new MatrixCreator ();
 			int[,] GMatrix = mc.GCreator();
-			for (int i = 0; i < 3; i++) {
-				for (int k = 0; k < 7; k++) {
+			Console.Write ("\n");
+			for (int i = 0; i < GMatrix.GetLength(0); i++) {
+				for (int k = 0; k < GMatrix.GetLength(1); k++) {
 					Console.Write (GMatrix[i,k] + " ");
-					if (k == 6) {
-						Console.Write ("\n");
-					}
 				}
+				Console.Write ("\n");
 			}
 		}
 		/*
@@ -50,15 +52,36 @@ namespace LinearEnDecTests
 		[Test ()]
 		public void TestHCreator ()
 		{
+			MockSetupClass msc = new MockSetupClass ();
+			if(PropertyClass.PArray==null){
+				msc.FillMatrix ();
+			}
+			MatrixCreator mc = new MatrixCreator ();
 			int[,] HMatrix = mc.HCreator();
-			for (int i = 0; i < 4; i++) {
-				for (int k = 0; k < 7; k++) {
+			Console.Write ("\n");
+			for (int i = 0; i < HMatrix.GetLength(0); i++) {
+				for (int k = 0; k < HMatrix.GetLength(1); k++) {
 					Console.Write (HMatrix[i,k] + " ");
-					if (k == 6) {
-						Console.Write ("\n");
-					}
 				}
+				Console.Write ("\n");
 			}
 		}
+
+		/*
+		 * Make MatrixCreator.IdentityArrayCreator public to use.
+		[Test()]
+		public void TestIdentityArrayCreator(){
+			MatrixCreator mc = new MatrixCreator ();
+			Random rd = new Random ();
+			int[,] idArray = mc.IdentityArrayCreator (rd.Next (100));
+			Console.Write ("\n");
+			for (int i = 0; i < idArray.GetLength(0); i++) {
+				for (int k = 0; k < idArray.GetLength(1); k++) {
+					Console.Write (idArray[i,k] + " ");
+				}
+				Console.Write ("\n");
+			}
+		}
+		*/
 	}
 }
