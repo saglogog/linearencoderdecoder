@@ -5,27 +5,10 @@ using LinearEncoderDecoderLibrary;
 namespace LinearEncoderDecoderInterface
 {
 
-	//delegate for the event 
-	public delegate void ErrorWindowEventHandler(object sender, ErrorWindowEventArgs e);  
-
-	public class ErrorWindowEventArgs: EventArgs{
-		public readonly string _labelMessage;
-
-		public ErrorWindowEventArgs(string labelMessage){
-			_labelMessage = labelMessage;
-		}
-
-	}
-
 	public class ShowGandHBasedOnP
 	{
 		
-		public event ErrorWindowEventHandler ErrorOccured;
-
-
 		public int[,] ReturnPArray(string p){
-			
-			this.ErrorOccured += new ErrorWindowEventHandler(CreateErrorWindow);
 
 			char[] ca = p.ToCharArray ();
 			char[] ca2;
@@ -42,6 +25,9 @@ namespace LinearEncoderDecoderInterface
 			int j = 0;
 			int h = -1;
 			ErrorWindowEventArgs ewea = null;
+			ErrorEventClass eec = new ErrorEventClass ();
+			Listener l = new Listener ();
+			l.Subscribe (eec);
 			for (int i = 0; i < ca2.Length; i++) {
 				if (ca2 [i] != '\n')
 					j++;
@@ -49,7 +35,7 @@ namespace LinearEncoderDecoderInterface
 					if (h != -1 && h != j && ewea == null) {
 						//show window with error explaining that this array doesnt have the correct format. 
 						ewea = new ErrorWindowEventArgs ("The P Array does not have the correct format!");
-						ErrorOccured (this, ewea);
+						eec.TriggerEvent (ewea);
 					}
 					h = j;
 					j = 0;
@@ -63,7 +49,7 @@ namespace LinearEncoderDecoderInterface
 			}
 			catch(ArgumentException e){
 				ErrorWindowEventArgs ewea2 = new ErrorWindowEventArgs ("Some of the P array arguments are not 0s or 1s !");
-				ErrorOccured (e, ewea2);
+				eec.TriggerEvent (ewea2);
 			}
 				
 			return P;
@@ -86,12 +72,6 @@ namespace LinearEncoderDecoderInterface
 
 			return mc.HCreator ();
 		}
-
-		public void CreateErrorWindow(object sender, ErrorWindowEventArgs e){
-			//add label message from eventargs property
-			ErrorWindow ew = new ErrorWindow (e._labelMessage);
-			ew.Show ();
-		}
-			
+						
 	}
 }

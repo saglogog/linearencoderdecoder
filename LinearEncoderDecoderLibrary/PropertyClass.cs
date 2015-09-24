@@ -13,10 +13,6 @@ namespace LinearEncoderDecoderLibrary
 	{	
 		//automatic property
 		public static int[,] PArray{ get; set; }
-
-		public static int[,] HMatrix{ get; set; }
-
-		public static int[,] GMatrix{ get; set; }
 	}
 }
 

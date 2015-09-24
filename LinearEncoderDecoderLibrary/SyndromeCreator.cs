@@ -46,7 +46,7 @@ namespace LinearEncoderDecoderLibrary
 			
 			Dictionary<int[], int[]> syndromeAndErrorVectorArray = new Dictionary<int[], int[]> ();
 			HelperClass hc = new HelperClass ();
-			//Get the error vectors array based on n and then convert ot jagged from multidimensional
+			//Get the error vectors array based on n and then convert to jagged from multidimensional
 			int[][] errorVectors = hc.ConvertRectangulartoJaggedLtoA(CreateErrorVectors (HMatrix.GetLength(1)));
 			int[][] syndromes = hc.ConvertRectangulartoJaggedCtoA (HMatrix);
 			int[] innerArrayS = new int[HMatrix.GetLength(0)];

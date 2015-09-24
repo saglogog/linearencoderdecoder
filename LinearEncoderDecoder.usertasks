@@ -8,4 +8,5 @@
   <Task file="" description="Find out why the G and H arrays are not generated properly in the interface." completed="True" />
   <Task file="" description="Find out why application crashes when ErrorOccured event is triggered" />
   <Task file="" description="Add check in ShowGandHBasedOnP.ReturnPArray() for the case of the P array not have been entered at all( trigger erroroccured event and show corresponding window" />
+  <Task file="" description="Add summaries and comments to interface components" />
 </ListOfTask>

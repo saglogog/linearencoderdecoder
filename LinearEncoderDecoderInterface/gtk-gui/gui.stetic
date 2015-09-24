@@ -282,6 +282,7 @@
                     <property name="Type">TextOnly</property>
                     <property name="Label" translatable="yes">Encode</property>
                     <property name="UseUnderline">True</property>
+                    <signal name="Clicked" handler="button3_click" />
                   </widget>
                   <packing>
                     <property name="Position">2</property>
@@ -365,6 +366,7 @@
                     <property name="Type">TextOnly</property>
                     <property name="Label" translatable="yes">Decode</property>
                     <property name="UseUnderline">True</property>
+                    <signal name="Clicked" handler="button4_click" />
                   </widget>
                   <packing>
                     <property name="Position">2</property>
