@@ -44,8 +44,7 @@ public partial class MainWindow: Gtk.Window
 			}
 		}
 		catch(ArgumentNullException ex){
-			
-			ewea = new ErrorWindowEventArgs ("You probably have not entered the P array...");
+			ewea = new ErrorWindowEventArgs ("You probably have not entered the P array..."+ex.Message);
 			eec.TriggerEvent(ewea);
 		}
 
@@ -63,7 +62,6 @@ public partial class MainWindow: Gtk.Window
 	protected void button2_click (object sender, EventArgs e)
 	{
 		ShowCodewordsBasedOnP sc = new ShowCodewordsBasedOnP ();
-		ShowGandHBasedOnP s = new ShowGandHBasedOnP ();
 		HelperClass hc = new HelperClass ();
 
 		ErrorWindowEventArgs ewea = null;
@@ -80,7 +78,7 @@ public partial class MainWindow: Gtk.Window
 		}
 		catch(ArgumentNullException ex){
 
-			ewea = new ErrorWindowEventArgs ("You probably have not entered the P array...");
+			ewea = new ErrorWindowEventArgs ("You probably have not entered the P array..."+ex.Message);
 			eec.TriggerEvent (ewea);
 		}
 	}

@@ -48,7 +48,7 @@ namespace LinearEncoderDecoderInterface
 				P = hc.ConvertCharArrayTo2DIntArray (ca2, '\n');
 			}
 			catch(ArgumentException e){
-				ErrorWindowEventArgs ewea2 = new ErrorWindowEventArgs ("Some of the P array arguments are not 0s or 1s !");
+				ErrorWindowEventArgs ewea2 = new ErrorWindowEventArgs ("Some of the P array arguments are not 0s or 1s !"+e.Message);
 				eec.TriggerEvent (ewea2);
 			}
 				

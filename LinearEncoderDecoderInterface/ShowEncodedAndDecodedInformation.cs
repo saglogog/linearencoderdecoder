@@ -73,8 +73,6 @@ namespace LinearEncoderDecoderInterface
 
 			char[] cAr = info.ToCharArray ();
 
-			ShowGandHBasedOnP s = new ShowGandHBasedOnP ();
-
 			ErrorWindowEventArgs ewea = null;
 			ErrorEventClass eec = new ErrorEventClass ();
 			Listener l = new Listener ();
@@ -88,7 +86,7 @@ namespace LinearEncoderDecoderInterface
 				}
 				catch(ArgumentException e){
 					ewea = new ErrorWindowEventArgs ("You entered something other than numbers, " +
-						"didn't you?");
+						"didn't you?"+e.Message);
 					eec.TriggerEvent(ewea);
 				}
 			}
@@ -102,7 +100,7 @@ namespace LinearEncoderDecoderInterface
 				}
 				catch(ArgumentException e){
 					ewea = new ErrorWindowEventArgs ("The entered information contains digits" +
-						" different than 0 and 1");
+						" different than 0 and 1"+e.Message);
 					eec.TriggerEvent(ewea);
 				}
 			}
