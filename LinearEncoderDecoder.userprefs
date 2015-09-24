@@ -1,31 +1,29 @@
 ﻿<Properties StartupItem="LinearEncoderDecoderInterface/LinearEncoderDecoderInterface.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderInterface/MainWindow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderLibrary/SyndromeCreator.cs">
     <Files>
-      <File FileName="LinearEncoderDecoderInterface/MainWindow.cs" Line="92" Column="3" />
-      <File FileName="LinearEncoderDecoderInterface/ShowEncodedAndDecodedInformation.cs" Line="74" Column="37" />
-      <File FileName="LinearEncoderDecoderInterface/ErrorEventClass.cs" Line="32" Column="3" />
-      <File FileName="LinearEncoderDecoderInterface/ShowGandHBasedOnP.cs" Line="51" Column="122" />
+      <File FileName="LinearEncoderDecoderLibrary/Encoder.cs" Line="42" Column="2" />
+      <File FileName="LinearEncoderDecoderLibrary/HelperClass.cs" Line="250" Column="37" />
+      <File FileName="LinearEncoderDecoderLibrary/CodewordGenerator.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderLibrary/Decoder.cs" Line="54" Column="2" />
+      <File FileName="LinearEncoderDecoderLibrary/MatrixCreator.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderLibrary/PropertyClass.cs" Line="17" Column="2" />
+      <File FileName="LinearEncoderDecoderLibrary/SyndromeCreator.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LinearEncoderDecoder" expanded="True">
-            <Node name="LinearEncoderDecoderInterface" expanded="True">
-              <Node name="MainWindow.cs" selected="True" />
+            <Node name="LinearEncoderDecoderInterface" expanded="True" />
+            <Node name="LinearEncoderDecoderLibrary" expanded="True">
+              <Node name="SyndromeCreator.cs" selected="True" />
             </Node>
-            <Node name="LinearEncoderDecoderLibrary" expanded="True" />
-            <Node name="LinearEnDecTests" expanded="True" />
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
         <State name="__root__">
-          <Node name="LinearEncoderDecoder" expanded="True" selected="True">
-            <Node name="LinearEnDecTests" expanded="True">
-              <Node name="LinearEnDecTests" expanded="True" />
-            </Node>
-          </Node>
+          <Node name="LinearEncoderDecoder" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

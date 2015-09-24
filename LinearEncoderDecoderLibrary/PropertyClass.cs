@@ -15,4 +15,3 @@ namespace LinearEncoderDecoderLibrary
 		public static int[,] PArray{ get; set; }
 	}
 }
-

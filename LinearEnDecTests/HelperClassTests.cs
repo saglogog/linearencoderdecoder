@@ -200,5 +200,13 @@ namespace LinearEnDecTests
 
 			Console.WriteLine (hc.Convert2DIntArrayToString(twoDimArrayExpected,'\n'));
 		}
+
+		[Test()]
+		public void TestConvertIntArrayToString(){
+			int[] intArray = new int[]{ 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 2, 4, 1, 7, 0 };
+			HelperClass hc = new HelperClass ();
+			string output = hc.ConvertIntArrayToString(intArray);
+			Console.WriteLine (output);
+		}
 	}
 }

@@ -242,5 +242,20 @@ namespace LinearEncoderDecoderLibrary
 
 			return output;
 		}
+
+		/// <summary>
+		/// Converts an integer array to string.
+		/// </summary>
+		/// <returns>The string.</returns>
+		/// <param name="intArray">Integer array.</param>
+		public string ConvertIntArrayToString(int[] intArray){
+		
+			string output = null;
+			for (int i = 0; i < intArray.Length; i++) {
+				output += intArray [i].ToString ();
+			}
+
+			return output;
+		}
 	}
 }

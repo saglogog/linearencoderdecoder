@@ -89,7 +89,9 @@ public partial class MainWindow: Gtk.Window
 	/// <param name="e">E.</param>
 	protected void button3_click (object sender, EventArgs e)
 	{
-		throw new NotImplementedException ();
+		HelperClass hc = new HelperClass ();
+		ShowEncodedAndDecodedInformation se = new ShowEncodedAndDecodedInformation ();
+		textview7.Buffer.Text = hc.ConvertIntArrayToString(se.GenerateEncodedInfo (entry4.Text));
 	}
 
 	/// <summary>
@@ -99,6 +101,8 @@ public partial class MainWindow: Gtk.Window
 	/// <param name="e">E.</param>
 	protected void button4_click (object sender, EventArgs e)
 	{
-		throw new NotImplementedException ();
+		HelperClass hc = new HelperClass ();
+		ShowEncodedAndDecodedInformation se = new ShowEncodedAndDecodedInformation ();
+		textview8.Buffer.Text = hc.ConvertIntArrayToString (se.GeneratedDecodedInfo (entry5.Text, textview1.Buffer.Text));
 	}
 }
