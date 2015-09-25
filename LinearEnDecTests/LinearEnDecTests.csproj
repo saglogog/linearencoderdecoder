@@ -41,16 +41,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MatrixCreatorTests.cs" />
-    <Compile Include="CodewordGeneratorTests.cs" />
-    <Compile Include="EncoderTests.cs" />
     <Compile Include="MockSetupClass.cs" />
-    <Compile Include="PropertyClassTests.cs" />
-    <Compile Include="SyndromeCreatorTests.cs" />
-    <Compile Include="HelperClassTests.cs" />
-    <Compile Include="DecoderTests.cs" />
+    <Compile Include="LibraryTests\CodewordGeneratorTests.cs" />
+    <Compile Include="LibraryTests\DecoderTests.cs" />
+    <Compile Include="LibraryTests\EncoderTests.cs" />
+    <Compile Include="LibraryTests\HelperClassTests.cs" />
+    <Compile Include="LibraryTests\MatrixCreatorTests.cs" />
+    <Compile Include="LibraryTests\PropertyClassTests.cs" />
+    <Compile Include="LibraryTests\SyndromeCreatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LibraryTests\" />
+    <Folder Include="InterfaceTests\" />
   </ItemGroup>
 </Project>
