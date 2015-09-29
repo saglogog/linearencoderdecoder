@@ -89,26 +89,26 @@ namespace LinearEnDecTests
 
 			Assert.AreEqual( expectedArray, hc.Multiply2DArrayByVector (TwoDMatrix, vector));
 		}
-		/** Make CreateDecimalFromBinary() to use 
+		//Make CreateDecimalFromBinary() to use 
 		[Test ()]
 		public void TestCreateDecimalFromBinary(){
 			//Arrange
-			int[] binaryNumber = new int[]{ 0,1,1,0,1,0,1};
-			int expectedDecimal = 53;
+			int[] binaryNumber = new int[]{ 1,1,1,0,1,0,1,0,1,1,0};
+			int expectedDecimal = 1878;
 			HelperClass hc = new HelperClass ();
 			//Act
 			int actualDecimal = hc.CreateDecimalFromBinary (binaryNumber);
 			//Assert
 			Assert.AreEqual (expectedDecimal, actualDecimal);
 		}
-		*/
 
-		/*
-		 * Make CreateBinaryFromDecimal() to use 
+
+
+		 //Make CreateBinaryFromDecimal() to use 
 		[Test ()]
 		public void TestCreateBinaryFromDecimal(){
 			int decimalNumber = 875;
-			int[] expectedBinary = new int[]{ 1, 1, 0, 1, 1, 0, 1, 0, 1, 1 };
+			//int[] expectedBinary = new int[]{ 0, 1, 0, 1, 1, 0, 1, 0, 1, 1 };
 
 			HelperClass hc = new HelperClass ();
 
@@ -121,7 +121,7 @@ namespace LinearEnDecTests
 			
 			}
 		}
-		*/
+
 
 		[Test ()]
 		public void TestSubtractBinaries(){

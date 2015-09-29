@@ -52,7 +52,7 @@ namespace LinearEncoderDecoderLibrary
 			int[] innerArrayS = new int[HMatrix.GetLength(0)];
 			int[] innerArrayEV = new int[HMatrix.GetLength(1)] ;
 
-			for (int i = 0; i < HMatrix.GetLength(1)+1 ; i++) {
+			for (int i = 0; i < HMatrix.GetLength(1) ; i++) {
 				//Need to assign the inner arrays as such for the dictionary straightforward assignment doesnt appear to work
 				//However the afforementioned conviction must be tested further.
 				innerArrayS = syndromes [i];

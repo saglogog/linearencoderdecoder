@@ -27,16 +27,14 @@ namespace LinearEncoderDecoderInterface
 		/// </summary>
 		/// <returns>The message digits.</returns>
 		/// <param name="info">The codeword to decode.</param>
-		public int[] GeneratedDecodedInfo(string info, string p){
+		public int[][] GeneratedDecodedInfo(string info, int[,] HMatrix){
 
 			//arrange
 			int[] iAr = GetIntArrayFromString (info);
 			Decoder dec = new Decoder ();
-			ShowGandHBasedOnP s = new ShowGandHBasedOnP ();
 			SyndromeCreator sc = new SyndromeCreator ();
-			int[,] HMatrix = s.GenerateH (p);
+			//int[,] HMatrix = s.GenerateH (p);
 
-			ErrorWindowEventArgs ewea = null;
 			ErrorEventClass eec = new ErrorEventClass ();
 			Listener l = new Listener ();
 			l.Subscribe (eec);
@@ -44,12 +42,26 @@ namespace LinearEncoderDecoderInterface
 			//get the error vector
 			int[] errorSyndrome = dec.CalculateErrorSyndromeForGivenCodeword (iAr, HMatrix);
 			Dictionary<int[], int[]> syndromeVectorDic = sc.CreateSyndrome (HMatrix);
-			int[] errorVector;
-			if (!syndromeVectorDic.TryGetValue (errorSyndrome, out errorVector)) {
-				ewea = new ErrorWindowEventArgs ("Ooops! Something went wrong when we tried to create" +
-					" the error vector from the error syndrome");
-				eec.TriggerEvent(ewea);
+
+			int[][] errorSyndromes = new int[HMatrix.GetLength(1)][];
+			int[][] errorVectors = new int[HMatrix.GetLength(1)][];
+			syndromeVectorDic.Keys.CopyTo (errorSyndromes, 0);
+			syndromeVectorDic.Values.CopyTo (errorVectors,0);
+
+			int[] temporaryErrorSyndrome = new int[HMatrix.GetLength(0)];;
+			int[] temporaryErrorVector = new int[HMatrix.GetLength(1)];
+			for (int i = 0; i < errorSyndromes.GetLength (0); i++) {
+				for (int j = 0; j < temporaryErrorSyndrome.Length; j++) {
+					temporaryErrorSyndrome [j] = errorSyndromes [i] [j];
+				}
+				if (temporaryErrorSyndrome == errorSyndrome) {
+					for (int k = 0; k < temporaryErrorVector.Length; k++) {
+						temporaryErrorVector [k] = errorVectors [i] [k];
+					}
+				}
 			}
+
+			int[] errorVector = temporaryErrorVector;
 
 			//correct the codeword and get the message digits from the codeword
 			int[] correctCodeword = dec.CorrectCodeword (iAr, errorVector);
@@ -58,7 +70,7 @@ namespace LinearEncoderDecoderInterface
 				msg [i] = correctCodeword [i];
 			}
 				
-			return msg;
+			return errorSyndromes;
 		}
 			
 

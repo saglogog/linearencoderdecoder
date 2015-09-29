@@ -39,6 +39,10 @@
       <Project>{886D1428-1144-444D-A291-4507FD4C1A23}</Project>
       <Name>LinearEncoderDecoderLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LinearEncoderDecoderInterface\LinearEncoderDecoderInterface.csproj">
+      <Project>{7284BFB1-B7C4-4F01-9B4B-9A7CFD230A35}</Project>
+      <Name>LinearEncoderDecoderInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MockSetupClass.cs" />
@@ -49,6 +53,7 @@
     <Compile Include="LibraryTests\MatrixCreatorTests.cs" />
     <Compile Include="LibraryTests\PropertyClassTests.cs" />
     <Compile Include="LibraryTests\SyndromeCreatorTests.cs" />
+    <Compile Include="InterfaceTests\ShowEncodedAndDecodedInformationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

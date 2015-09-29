@@ -120,7 +120,7 @@ namespace LinearEncoderDecoderLibrary
 		//or use list to add elements dynamically.
 		//Opted for the first solution, since in that way we dont need to use a list, then "cast" the list to an an array and then
 		//reverse the array.
-		private int[] CreateBinaryFromDecimal(int decimalNumber){
+		public int[] CreateBinaryFromDecimal(int decimalNumber){
 
 			//my tests have shown that the number of digits of the binary number corresponding to a given binary number equals the
 			//logarithm base 2 of the number rounded to the closest smaller decimal number(eg 5.3232 becomes 5) plus 1, or simply rounded 
@@ -145,7 +145,7 @@ namespace LinearEncoderDecoderLibrary
 
 
 		//make private
-		private int CreateDecimalFromBinary(int[] binaryNumber){
+		public int CreateDecimalFromBinary(int[] binaryNumber){
 
 			int result = 0;
 
