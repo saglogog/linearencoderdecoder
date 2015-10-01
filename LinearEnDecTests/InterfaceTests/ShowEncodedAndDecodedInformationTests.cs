@@ -113,10 +113,18 @@ namespace LinearEnDecTests
 			}
 			Console.WriteLine ("");
 
-			int[] correctCodeword = se.GeneratedDecodedInfo (codeword, mc.HCreator());
-			Console.WriteLine ("Correct Codeword:");
-			for (int i = 0; i < PropertyClass.PArray.GetLength (1) ; i++) {
-				Console.Write (correctCodeword [i]);
+//			 -- writes out the correct codeword the tested method has calculated if the method is set to return the cor. codew.
+//			int[] correctCodeword = se.GeneratedDecodedInfo (codeword, mc.HCreator());
+//			Console.WriteLine ("Correct Codeword:");
+//			for (int i = 0; i < PropertyClass.PArray.GetLength (1)+PropertyClass.PArray.GetLength(0) ; i++) {
+//				Console.Write (correctCodeword [i]);
+//			}
+//			Console.WriteLine ("");
+
+			int[] errorVector = se.GeneratedDecodedInfo (codeword, mc.HCreator());
+			Console.WriteLine ("Error Vector");
+			for (int i = 0; i < PropertyClass.PArray.GetLength (1)+PropertyClass.PArray.GetLength(0) ; i++) {
+				Console.Write (errorVector [i]);
 			}
 			Console.WriteLine ("");
 

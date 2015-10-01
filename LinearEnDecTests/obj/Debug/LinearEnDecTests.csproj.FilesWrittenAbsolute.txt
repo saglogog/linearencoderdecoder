@@ -16,3 +16,5 @@
 /Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Debug/LinearEncoderDecoderLibrary.dll.mdb
 /home/sag/Projects/linearencoderdecoder/LinearEnDecTests/bin/Debug/LinearEncoderDecoderInterface.exe
 /home/sag/Projects/linearencoderdecoder/LinearEnDecTests/bin/Debug/LinearEncoderDecoderInterface.exe.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Debug/LinearEncoderDecoderInterface.exe
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Debug/LinearEncoderDecoderInterface.exe.mdb

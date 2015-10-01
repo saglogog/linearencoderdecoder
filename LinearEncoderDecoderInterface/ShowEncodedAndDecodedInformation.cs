@@ -71,7 +71,7 @@ namespace LinearEncoderDecoderInterface
 				msg [i] = correctCodeword [i];
 			}
 				
-			return correctCodeword;
+			return temporaryErrorVector;
 		}
 			
 
@@ -128,7 +128,7 @@ namespace LinearEncoderDecoderInterface
 		/// <param name="a1">First array.</param>
 		/// <param name="a2">Second Array.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public bool CheckArrayEquality<T>(T[] a1, T[] a2){
+		private bool CheckArrayEquality<T>(T[] a1, T[] a2){
 		
 			if (ReferenceEquals (a1, a2))
 				return true;
