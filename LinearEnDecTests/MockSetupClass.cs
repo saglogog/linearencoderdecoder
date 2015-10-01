@@ -13,7 +13,7 @@ namespace LinearEnDecTests
 		public  int[,] FillMatrix(){
 			Random rd = new Random ();
 			//--PropertyClass pc = new PropertyClass ();
-			int[,] theMatrix = new int[rd.Next(5), rd.Next(5)];
+			int[,] theMatrix = new int[rd.Next(10), rd.Next(10)];
 			for (int i = 0; i < theMatrix.GetLength(0); i++) {
 				for (int k = 0; k < theMatrix.GetLength(1); k++) {
 					theMatrix [i, k] = rd.Next ()%2;

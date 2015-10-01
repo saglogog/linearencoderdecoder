@@ -31,14 +31,16 @@ namespace LinearEnDecTests
 				MockSetupClass msc = new MockSetupClass ();
 				msc.FillMatrix ();
 			}
-			CodewordGenerator cg = new CodewordGenerator (PropertyClass.PArray.GetLength(0));
+			CodewordGenerator cg = new CodewordGenerator (PropertyClass.PArray.GetLength (0));
 			//Thread.Sleep (5000);
-			int[,] allCodewordsBasedOnKAndP = cg.CreateAllCodewordsBasedOnKAndP (PropertyClass.PArray.GetLength(0)+
-				PropertyClass.PArray.GetLength(1));
-			for (int i = 0; i < 8; i++) {
-				Console.Write ("\n{0} {1} {2} {3} {4} {5} {6}\n", allCodewordsBasedOnKAndP [i,0], allCodewordsBasedOnKAndP [i, 1], allCodewordsBasedOnKAndP [i, 2], allCodewordsBasedOnKAndP [i,3], allCodewordsBasedOnKAndP[i,4], allCodewordsBasedOnKAndP[i,5], allCodewordsBasedOnKAndP [i,6]) ;				
+			int[,] allCodewordsBasedOnKAndP = cg.CreateAllCodewordsBasedOnKAndP (PropertyClass.PArray.GetLength (0) +
+			                                  PropertyClass.PArray.GetLength (1));
+			for (int i = 0; i < allCodewordsBasedOnKAndP.GetLength (0); i++) {
+				for (int j = 0; j < allCodewordsBasedOnKAndP.GetLength (1); j++) {
+					Console.Write ( allCodewordsBasedOnKAndP [i,j]);				
+				}
+				Console.WriteLine ("");
 			}
 		}
-	
 	}
 }

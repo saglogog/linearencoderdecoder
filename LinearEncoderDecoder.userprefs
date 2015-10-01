@@ -1,39 +1,25 @@
 ﻿<Properties StartupItem="LinearEncoderDecoderInterface/LinearEncoderDecoderInterface.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderLibrary/HelperClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearEncoderDecoderInterface/ShowEncodedAndDecodedInformation.cs">
     <Files>
-      <File FileName="LinearEncoderDecoderInterface/ShowEncodedAndDecodedInformation.cs" Line="51" Column="31" />
-      <File FileName="LinearEnDecTests/InterfaceTests/ShowEncodedAndDecodedInformationTests.cs" Line="71" Column="110" />
-      <File FileName="LinearEncoderDecoderLibrary/Encoder.cs" Line="9" Column="20" />
+      <File FileName="LinearEncoderDecoderInterface/ShowEncodedAndDecodedInformation.cs" Line="74" Column="20" />
+      <File FileName="LinearEnDecTests/InterfaceTests/ShowEncodedAndDecodedInformationTests.cs" Line="118" Column="59" />
       <File FileName="LinearEncoderDecoderInterface/MainWindow.cs" Line="1" Column="1" />
-      <File FileName="LinearEncoderDecoderLibrary/SyndromeCreator.cs" Line="55" Column="44" />
-      <File FileName="LinearEncoderDecoderLibrary/HelperClass.cs" Line="156" Column="6" />
+      <File FileName="LinearEnDecTests/LibraryTests/SyndromeCreatorTests.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderLibrary/SyndromeCreator.cs" Line="1" Column="1" />
+      <File FileName="LinearEnDecTests/LibraryTests/MatrixCreatorTests.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderLibrary/HelperClass.cs" Line="1" Column="1" />
+      <File FileName="LinearEncoderDecoderLibrary/Decoder.cs" Line="1" Column="1" />
+      <File FileName="LinearEnDecTests/MockSetupClass.cs" Line="7" Column="3" />
     </Files>
     <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="LinearEncoderDecoder" expanded="True">
-            <Node name="LinearEncoderDecoderInterface" expanded="True" />
-            <Node name="LinearEncoderDecoderLibrary" expanded="True">
-              <Node name="HelperClass.cs" selected="True" />
-            </Node>
-            <Node name="LinearEnDecTests" expanded="True">
-              <Node name="InterfaceTests" expanded="True" />
-              <Node name="LibraryTests" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
         <State name="__root__">
-          <Node name="LinearEncoderDecoder" expanded="True">
+          <Node name="LinearEncoderDecoder" expanded="True" selected="True">
             <Node name="LinearEnDecTests" expanded="True">
               <Node name="LinearEnDecTests" expanded="True">
-                <Node name="HelperClassTests" expanded="True" />
-                <Node name="ShowEncodedAndDecodedInformationTests" expanded="True">
-                  <Node name="TestGenerateDecodedInfo" selected="True" />
-                </Node>
-                <Node name="SyndromeCreatorTests" expanded="True" />
+                <Node name="CodewordGeneratorTests" expanded="True" />
+                <Node name="ShowEncodedAndDecodedInformationTests" expanded="True" />
               </Node>
             </Node>
           </Node>

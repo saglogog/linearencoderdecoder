@@ -67,15 +67,67 @@ namespace LinearEnDecTests
 			//string data = hc.ConvertIntArrayToString (intArrayExpected);
 			MatrixCreator mc = new MatrixCreator();
 
+			string codeword = "";
+			for (int i = 0; i < PropertyClass.PArray.GetLength (0) + PropertyClass.PArray.GetLength (1); i++) {
+				codeword += (rd.Next ()%2);
+			}
+
 			ShowEncodedAndDecodedInformation se = new ShowEncodedAndDecodedInformation ();
-			int[][] errorSyndromes = se.GeneratedDecodedInfo ("000110", mc.HCreator ());
-			for (int i = 0; i < PropertyClass.PArray.GetLength(1); i++) {
-				for (int j = 0; j < PropertyClass.PArray.GetLength (0) + PropertyClass.PArray.GetLength (1); j++) {
+
+			/* --writes error vectors in output if the tested method is set to return error vectors
+			int[][] errorVectors = se.GeneratedDecodedInfo (codeword, mc.HCreator ());
+			Console.WriteLine ("Error Vectors:");
+			for (int i = 0; i < PropertyClass.PArray.GetLength (0) + PropertyClass.PArray.GetLength (1); i++) {
+				for(int j = 0; j<PropertyClass.PArray.GetLength (0) + PropertyClass.PArray.GetLength (1);j++){
+					Console.Write (errorVectors [i][j]);
+				}
+				Console.WriteLine ("");
+			}
+			*/
+
+			/* --writes error syndromes in output if the tested method is set to return error syndromes
+			int[][] errorSyndromes = se.GeneratedDecodedInfo (codeword, mc.HCreator ());
+			Console.WriteLine ("Error Syndromes:");
+			for (int i = 0; i < PropertyClass.PArray.GetLength(1)+PropertyClass.PArray.GetLength(0); i++) {
+				for (int j = 0; j < PropertyClass.PArray.GetLength (1); j++) {
 					Console.Write (errorSyndromes [i][j]);
 				}
 				Console.WriteLine ("");
 			}
+			*/
 
+			/* --writes out the HMatrix passed to the tested method if the method is set to return the HMatrix
+			int[,] HMatrix = se.GeneratedDecodedInfo(codeword, mc.HCreator());
+			Console.WriteLine ("H matrix:");
+			for (int i = 0; i < HMatrix.GetLength (0); i++) {
+				for (int j = 0; j < HMatrix.GetLength (1); j++) {
+					Console.Write (HMatrix [i, j]);
+				}
+				Console.WriteLine ("");
+			}
+			*/
+
+			Console.WriteLine ("Incorrect codeword:");
+			for (int i = 0; i < PropertyClass.PArray.GetLength (1) + PropertyClass.PArray.GetLength (0); i++) {
+				Console.Write (codeword [i]);
+			}
+			Console.WriteLine ("");
+
+			int[] correctCodeword = se.GeneratedDecodedInfo (codeword, mc.HCreator());
+			Console.WriteLine ("Correct Codeword:");
+			for (int i = 0; i < PropertyClass.PArray.GetLength (1) ; i++) {
+				Console.Write (correctCodeword [i]);
+			}
+			Console.WriteLine ("");
+
+			int[,] actualHMatrix = mc.HCreator ();
+			Console.WriteLine ("Actual H matrix:");
+			for (int i = 0; i < actualHMatrix.GetLength (0); i++) {
+				for (int j = 0; j <actualHMatrix.GetLength (1); j++) {
+					Console.Write(actualHMatrix [i, j]);
+				}
+				Console.WriteLine ("");
+			}
 		}
 	}
 }

@@ -29,9 +29,10 @@ namespace LinearEnDecTests
 		public void TestCreateSyndrome()
 		{
 			int[,] HMatrix = new int[,] {
-				{1,1,1,0,1,0,0 },
-				{1,1,0,1,0,1,0 },
-				{1,0,1,1,0,0,1 }
+				{1,1,1,1,1,0,0,0 },
+				{0,1,0,1,0,1,0,0 },
+				{1,0,1,0,0,0,1,0 },
+				{1,0,0,0,0,0,0,1 }
 			};
 			SyndromeCreator sc = new SyndromeCreator ();
 			Dictionary<int[], int[]> errorVectorAndSyndromeArray = sc.CreateSyndrome (HMatrix);

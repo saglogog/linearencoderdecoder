@@ -104,6 +104,6 @@ public partial class MainWindow: Gtk.Window
 		HelperClass hc = new HelperClass ();
 		ShowGandHBasedOnP s = new ShowGandHBasedOnP ();
 		ShowEncodedAndDecodedInformation se = new ShowEncodedAndDecodedInformation ();
-		//textview8.Buffer.Text = hc.ConvertIntArrayToString (se.GeneratedDecodedInfo (entry5.Text, s.GenerateG (textview1.Buffer.Text)));
+		textview8.Buffer.Text = hc.ConvertIntArrayToString (se.GeneratedDecodedInfo (entry5.Text, s.GenerateH (textview1.Buffer.Text)));
 	}
 }

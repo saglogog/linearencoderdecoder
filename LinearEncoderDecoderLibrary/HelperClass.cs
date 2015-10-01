@@ -58,12 +58,12 @@ namespace LinearEncoderDecoderLibrary
 		/// the vector and then get the linear combination of each line:
 		///  Let there be an  array A (nxk - n is the number of lines and k is the number of columns) and a vector V (k). Then the 
 		///  multiplication produces a vector S (n):
-		/// 	The multiplication is acted as follows: s1 = h11xv1 + h12xv2 + ... + h1kxvk
-		/// 											s2 = h21xv1 + h22xv2 + ... + h2kxvk
+		/// 	The multiplication is acted as follows: s1 = A11xv1 + A12xv2 + ... + A1kxvk
+		/// 											s2 = A21xv1 + A22xv2 + ... + A2kxvk
 		/// 											.
 		/// 											.
 		/// 											.
-		/// 											sn = hn1xv1 = hn2xv2 + ... + hnkxvk
+		/// 											sn = An1xv1 = An2xv2 + ... + Ankxvk
 		/// Thus we receive the vector S = [s1 s2 ... sn]
 		/// </summary>
 		/// <returns>A 1D vector that is returned by the afforementioned multiplication.</returns>

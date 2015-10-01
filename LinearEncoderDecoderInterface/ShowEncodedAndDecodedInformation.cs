@@ -27,13 +27,12 @@ namespace LinearEncoderDecoderInterface
 		/// </summary>
 		/// <returns>The message digits.</returns>
 		/// <param name="info">The codeword to decode.</param>
-		public int[][] GeneratedDecodedInfo(string info, int[,] HMatrix){
+		public int[] GeneratedDecodedInfo(string info, int[,] HMatrix){
 
 			//arrange
 			int[] iAr = GetIntArrayFromString (info);
 			Decoder dec = new Decoder ();
 			SyndromeCreator sc = new SyndromeCreator ();
-			//int[,] HMatrix = s.GenerateH (p);
 
 			ErrorEventClass eec = new ErrorEventClass ();
 			Listener l = new Listener ();
@@ -48,13 +47,15 @@ namespace LinearEncoderDecoderInterface
 			syndromeVectorDic.Keys.CopyTo (errorSyndromes, 0);
 			syndromeVectorDic.Values.CopyTo (errorVectors,0);
 
-			int[] temporaryErrorSyndrome = new int[HMatrix.GetLength(0)];;
+			int[] temporaryErrorSyndrome = new int[HMatrix.GetLength(0)];
 			int[] temporaryErrorVector = new int[HMatrix.GetLength(1)];
+
 			for (int i = 0; i < errorSyndromes.GetLength (0); i++) {
 				for (int j = 0; j < temporaryErrorSyndrome.Length; j++) {
 					temporaryErrorSyndrome [j] = errorSyndromes [i] [j];
 				}
-				if (temporaryErrorSyndrome == errorSyndrome) {
+					
+				if (CheckArrayEquality<int>(temporaryErrorSyndrome, errorSyndrome)) {
 					for (int k = 0; k < temporaryErrorVector.Length; k++) {
 						temporaryErrorVector [k] = errorVectors [i] [k];
 					}
@@ -70,7 +71,7 @@ namespace LinearEncoderDecoderInterface
 				msg [i] = correctCodeword [i];
 			}
 				
-			return errorSyndromes;
+			return correctCodeword;
 		}
 			
 
@@ -119,5 +120,32 @@ namespace LinearEncoderDecoderInterface
 
 			return iAr;
 		}
+	
+		/// <summary>
+		/// Checks equality of two generic arrays.
+		/// </summary>
+		/// <returns><c>true</c>, if array equality was checked, <c>false</c> otherwise.</returns>
+		/// <param name="a1">First array.</param>
+		/// <param name="a2">Second Array.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
+		public bool CheckArrayEquality<T>(T[] a1, T[] a2){
+		
+			if (ReferenceEquals (a1, a2))
+				return true;
+			
+			if (a1 == null || a2 == null)
+				return false;
+
+			if (a1.Length != a2.Length)
+				return false;
+
+			EqualityComparer<T> comparer = EqualityComparer<T>.Default;
+			for (int i = 0; i < a1.Length; i++) {
+				if(!comparer.Equals(a1[i], a2[i]))
+					return false;
+			}
+
+			return true;
+		}	
 	}
 }
