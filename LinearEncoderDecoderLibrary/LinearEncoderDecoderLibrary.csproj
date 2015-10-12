@@ -39,6 +39,7 @@
     <Compile Include="HelperClass.cs" />
     <Compile Include="Decoder.cs" />
     <Compile Include="SyndromeCreator.cs" />
+    <Compile Include="SyndromesAndCosetLeaders.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
