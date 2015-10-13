@@ -51,11 +51,13 @@ namespace LinearEncoderDecoderLibrary
 					counter = 1;
 				} else {
 					//how many ones I need the cosets to have 
+					//starts from two b/c all the ones have been used
 					int value = 2;
 
 					int k = 0;
 					while(k <(int)numberOfCosetLeaders){
 						if (dic.FirstOrDefault(x => x.Value == value).Value && dic.FirstOrDefault(x => x.Value == value).Value){
+							
 						}
 					}
 				}
