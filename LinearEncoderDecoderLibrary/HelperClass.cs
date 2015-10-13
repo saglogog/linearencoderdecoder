@@ -106,7 +106,7 @@ namespace LinearEncoderDecoderLibrary
 		/// <returns>Addition result.</returns>
 		/// <param name="binary1">Binary1.</param>
 		/// <param name="binary2">Binary2.</param>
-		private int AddBinaries(int binary1, int binary2){
+		public int AddBinaries(int binary1, int binary2){
 			int result = 2;
 			if ((binary1 != 0 && binary1 != 1) || (binary2 != 0 && binary2 != 1))
 				throw new FormatException ("The arguments must have binary form - they must have the value of either 1 or 0");
