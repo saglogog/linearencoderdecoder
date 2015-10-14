@@ -9,7 +9,7 @@ namespace LinearEnDecTests
 		/// Fills the pArray property in the property class.
 		/// It also returns the matrix for testing purposes. 
 		/// </summary>
-		/// <returns>The matrix.</returns>
+		/// <returns>The p array.</returns>
 		public  int[,] FillMatrix(){
 			Random rd = new Random ();
 			//--PropertyClass pc = new PropertyClass ();
@@ -22,6 +22,21 @@ namespace LinearEnDecTests
 			//--pc.PArray = theMatrix;
 			PropertyClass.PArray = theMatrix;
 			return theMatrix;
+		}
+
+		/// <summary>
+		/// Provides a multidimensional array of codewords for testing purposes,
+		/// based on the data provided by the FillMatrix() method.
+		/// </summary>
+		/// <returns>The codewords array.</returns>
+		public int[,] ProvideCodewords(){
+			FillMatrix ();
+			int n = PropertyClass.PArray.GetLength(0) + PropertyClass.PArray.GetLength(1);
+			int k = PropertyClass.PArray.GetLength (0);
+			CodewordGenerator cg = new CodewordGenerator (k);
+			int[,] codewords = cg.CreateAllCodewordsBasedOnKAndP (n);
+
+			return codewords;
 		}
 	}
 }

@@ -54,9 +54,8 @@ namespace LinearEncoderDecoderLibrary
 					//starts from two b/c all the ones have been used
 					int value = 2;
 
-					int k = 0;
-					while(k <(int)numberOfCosetLeaders){
-						if (dic.FirstOrDefault(x => x.Value == value).Value && dic.FirstOrDefault(x => x.Value == value).Value){
+					for(int k = 0; k <(int)numberOfCosetLeaders;k++){
+						if (dic.FirstOrDefault(x => x.Value == value).Value == 2){
 							
 						}
 					}
@@ -73,7 +72,7 @@ namespace LinearEncoderDecoderLibrary
 		/// </summary>
 		/// <returns>An integer that signifies the number of ones in the given binary number.</returns>
 		/// <param name="binary">The binary number given as an array, where each element represents a digit.</param>
-		private int ReturnNumberOfOnesInBinary(int[] binary){
+		public int ReturnNumberOfOnesInBinary(int[] binary){
 			int numberOfOnes = 0;
 
 			for (int i = 0; i < binary.Length; i++) {
@@ -115,8 +114,6 @@ namespace LinearEncoderDecoderLibrary
 			cosetLeadersAlreadyUsed.CopyTo (cosetLeadersArray);
 			int[][] rowOfCosets = new int[numberOfCodewords][];
 
-
-			if(Coset
 			bool innerCounter1 = false;
 			bool innerCounter2 = false;
 			bool outerCounter = false;

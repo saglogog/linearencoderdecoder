@@ -54,6 +54,7 @@
     <Compile Include="LibraryTests\PropertyClassTests.cs" />
     <Compile Include="LibraryTests\SyndromeCreatorTests.cs" />
     <Compile Include="InterfaceTests\ShowEncodedAndDecodedInformationTests.cs" />
+    <Compile Include="LibraryTests\SyndromeAndCosetLeadersTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
