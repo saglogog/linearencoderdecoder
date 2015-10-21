@@ -1,0 +1,8 @@
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Release/LinearEncoderDecoderInterface.gtk-gui.gui.stetic
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Release/LinearEncoderDecoderInterface.exe.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Release/LinearEncoderDecoderInterface.exe
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Release/LinearEncoderDecoderInterface.exe
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/obj/Release/LinearEncoderDecoderInterface.exe.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Release/LinearEncoderDecoderLibrary.dll
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEncoderDecoderInterface/bin/Release/LinearEncoderDecoderLibrary.dll.mdb

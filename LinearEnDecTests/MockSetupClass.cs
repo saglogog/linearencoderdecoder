@@ -38,5 +38,67 @@ namespace LinearEnDecTests
 
 			return codewords;
 		}
+
+		/// <summary>
+		/// Returns a random binary (an integer array of 0s and 1s).
+		/// </summary>
+		/// <returns>An integer array of 0s and 1s.</returns>
+		/// <param name="binaryLength">The length of the array containing the binary.</param>
+		public int[] GetARandomBinary(int binaryLength){
+			int[] rdBinary = new int[binaryLength];
+			Random rd = new Random ();
+			for (int i = 0; i < binaryLength; i++) {
+				rdBinary [i] = rd.Next () % 2;
+			}
+
+			return rdBinary;
+		}
+
+
+		/// <summary>
+		/// Prints an array to the console. 
+		/// </summary>
+		/// <param name="message1">The message to write before the array.</param>
+		/// <param name="array">Array.</param>
+		public void PrintAnArray(string message1, int[] array){
+			Console.WriteLine (message1);
+			for (int i = 0; i < array.Length; i++) {
+				Console.Write (array [i] + " ");
+			}
+			Console.WriteLine ();
+		}
+
+		/// <summary>
+		/// Prints a 2D array ot the console.
+		/// </summary>
+		/// <param name="message1">Message1.</param>
+		/// <param name="array">Array.</param>
+		public void Print2DArray(string message1, int[,] array){
+			Console.WriteLine (message1);
+			for (int i = 0; i < array.GetLength (0); i++) {
+				for (int j = 0; j < array.GetLength (1); j++) {
+					Console.Write(array[i,j]);
+				}
+				Console.WriteLine ();
+			}
+			Console.WriteLine ();
+		}
+
+
+		/// <summary>
+		/// Prints a jagged array to the console.
+		/// </summary>
+		/// <param name="message1">Message1.</param>
+		/// <param name="array">Array.</param>
+		public void PrintJaggedArray(string message1, int[][]array){
+			Console.WriteLine (message1);
+			for (int i = 0; i < array.Length; i++) {
+				for (int j = 0; j < array[i].Length; j++) {
+					Console.Write(array[i][j]);
+				}
+				Console.WriteLine ();
+			}
+			Console.WriteLine ();
+		}
 	}
 }

@@ -14,3 +14,5 @@
 /Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/nunit.framework.dll
 /Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderLibrary.dll
 /Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderLibrary.dll.mdb
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderInterface.exe
+/Users/Eternal/Documents/Repositories/linearencoderdecoder/LinearEnDecTests/bin/Release/LinearEncoderDecoderInterface.exe.mdb

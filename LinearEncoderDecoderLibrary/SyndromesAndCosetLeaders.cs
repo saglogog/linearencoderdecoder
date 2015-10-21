@@ -90,8 +90,8 @@ namespace LinearEncoderDecoderLibrary
 		/// <param name="binaries">The 2d binaries array.</param>
 		public int[] CheckForOnesInRectangularArrayOfBinaries(int[,] binaries){
 			
-			int[] currentBinary = null;
-			int[] onesCounter = null;
+			int[] currentBinary = new int[binaries.GetLength(1)];
+			int[] onesCounter = new int[binaries.GetLength(0)];
 
 			for (int i = 0; i < binaries.GetLength (0); i++) {
 				for (int j = 0; j < binaries.GetLength (1); j++) {
